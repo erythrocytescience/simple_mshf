@@ -314,7 +314,7 @@ Q_w^E = \dfrac{2\pi p_{\Gamma} H r_w}{\left(H - r_w\right)}
 Поправочный коэффициент $\theta$ будем определять из условия равенства численного и аналитического дебитов $Q_w^E = Q_{\text{num}}$. Тогда $\theta$ по формулам (\ref{eq:kham_hw_outer_Q}) и (\ref{eq:kham_hw_outer_pg}) будет
 \begin{equation}
 \displaystyle
-\theta = \dfrac{Q_{\text{num}} \left(H - r_w \right) - 2 \pi H r_w}{r_w Q_{\text{num}} \ln{H} \right}
+\theta = \dfrac{Q_{\text{num}} \left(H - r_w \right) - 2 \pi H r_w}{r_w Q_{\text{num}} \ln{H}}
 \label{eq:kham_theta_spheric}
 \end{equation}
 
@@ -516,8 +516,8 @@ $H=0.25, r=0.0005$ & $1.13 \cdot 10^{-3}$ & $1.51 \cdot 10^{-3}$ & $1.13 \cdot 1
 
 Оценим долю притока с торцов скважины.
 
-На рис.~\ref{eq:kham_qsph_qan_an_L5} приведены поля $Q_w^E / Q_w_P$, вычисленные по аналитическим формулам (\ref{eq:eq:kham_qw_inner}) и (\ref{eq:eq:kham_qw_outer}) (на самом деле тут $2 Q_w^E$, так как торцов два).
-Ясно, что для толстой скважины и\или тонкого пласта эффект от сферического притока будет более существенным, что подтверждается расчетами (рис.~\ref{eq:kham_qsph_qan_an_L5})
+На рис.~\ref{eq:kham_qsph_qan_an_L5} приведены поля $Q_w^E / Q_w^P$, вычисленные по аналитическим формулам (\ref{eq:eq:kham_qw_inner}) и (\ref{eq:eq:kham_qw_outer}) (на самом деле тут $2 Q_w^E$, так как торцов два).
+Ясно, что для толстой скважины и/или тонкого пласта эффект от сферического притока будет более существенным, что подтверждается расчетами (рис.~\ref{eq:kham_qsph_qan_an_L5})
 
 \begin{figure}[h!]
 \centering
@@ -1080,7 +1080,7 @@ B_a^E = \dfrac{I_0 \left( \lambda H \right) + \left(p^f_{\Gamma} - 1 \right) I_0
 \displaystyle
 \begin{gathered}
 p_f\left(r\right) = 1 + \dfrac{\left(p^f_{\Gamma}-1\right) E_a \left(r\right) + J_a^E\left(r\right)}{D_a}, \;\; r_w \leq r < H, \\
-J_a^E(r) = I_0 \left(\lambda H) K_0 \left(\lambda r\right) - K_0 \left(\lambda H\right) I_0 \left(\lambda r).
+J_a^E(r) = I_0 \left(\lambda H) K_0 \left(\lambda r\right) - K_0 \left(\lambda H\right) I_0 \left(\lambda r\right).
 \end{gathered}
 \label{eq:kham_fract_outer_final_sol_pf_radial}
 \end{equation}
