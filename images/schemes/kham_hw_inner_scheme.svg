@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="206mm"
+   height="103mm"
+   viewBox="0 0 206 103"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (unknown)"
+   sodipodi:docname="khamidullin_well_pipe_2D_scheme2.svg"
+   inkscape:export-filename="khamidullin_well_pipe_2D_scheme.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="132.22897"
+     inkscape:cy="181.72644"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle-9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7-0" />
+    </marker>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4">
+      <rect
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.999998;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect4"
+         width="11.27282"
+         height="10.400886"
+         x="49.26408"
+         y="155.26591" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4-8">
+      <rect
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.999998;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect4-6"
+         width="11.27282"
+         height="10.400886"
+         x="49.26408"
+         y="155.26591" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect1"
+       width="169.11031"
+       height="63.768681"
+       x="17.687933"
+       y="19.093819" />
+    <path
+       style="font-style:italic;font-size:14.1111px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella Italic';stroke-linecap:square;stroke-miterlimit:8.6"
+       d="m 130.49313,57.488619 c 0.59266,-0.02822 1.18533,-0.04233 1.77799,-0.04233 0.59267,0 1.18534,0.01411 1.778,0.04233 l 0.0423,-0.395111 -0.73378,-0.04233 c -0.381,-0.02822 -0.508,-0.126999 -0.508,-0.409221 0,-0.09878 0.0141,-0.225778 0.0282,-0.296334 l 1.25589,-7.549438 c 0.0988,-0.550333 0.16933,-0.635 0.71967,-0.677333 l 0.49388,-0.04233 0.0423,-0.395111 c -0.52211,0.02822 -1.05833,0.04233 -1.58045,0.04233 -0.64911,0 -1.28411,-0.01411 -1.91911,-0.04233 l -0.0423,0.395111 0.66322,0.02822 c 0.33867,0.01411 0.49389,0.127 0.49389,0.366889 0,0.126999 -0.0705,0.77611 -0.127,1.086554 l -1.016,6.124218 c -0.21166,1.255888 -0.254,1.326443 -0.81844,1.368776 l -0.508,0.04233 z m 4.69899,0 c 0.59267,-0.02822 1.18534,-0.04233 1.778,-0.04233 0.59267,0 1.18534,0.01411 1.778,0.04233 l 0.0423,-0.395111 -0.73378,-0.04233 c -0.381,-0.02822 -0.508,-0.126999 -0.508,-0.409221 0,-0.09878 0.0141,-0.225778 0.0282,-0.296334 l 1.25589,-7.549438 c 0.0988,-0.550333 0.16933,-0.635 0.71966,-0.677333 l 0.49389,-0.04233 0.0423,-0.395111 c -0.52211,0.02822 -1.05834,0.04233 -1.58045,0.04233 -0.64911,0 -1.28411,-0.01411 -1.91911,-0.04233 l -0.0423,0.395111 0.66322,0.02822 c 0.33867,0.01411 0.49389,0.127 0.49389,0.366889 0,0.126999 -0.0705,0.77611 -0.127,1.086554 l -1.016,6.124218 c -0.21167,1.255888 -0.254,1.326443 -0.81844,1.368776 l -0.508,0.04233 z"
+       id="text1-7-6-1"
+       aria-label="II" />
+    <path
+       style="font-style:italic;font-size:14.1111px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella Italic';stroke-linecap:square;stroke-miterlimit:8.6"
+       d="m 197.4756,87.664554 c 0.21167,0.112889 0.43745,0.169333 0.60678,0.169333 0.46567,0 1.016,-0.409222 1.45344,-1.072443 l 1.07245,-1.650999 0.15522,0.973666 c 0.19755,1.199443 0.508,1.749776 1.016,1.749776 0.31044,0 0.762,-0.239888 1.21355,-0.64911 l 0.69145,-0.620889 -0.127,-0.268111 c -0.508,0.423333 -0.86078,0.635 -1.08656,0.635 -0.21166,0 -0.39511,-0.141111 -0.53622,-0.423333 -0.127,-0.268111 -0.28222,-0.790222 -0.35278,-1.199444 l -0.254,-1.425221 0.49389,-0.691444 c 0.66322,-0.917221 1.04422,-1.241777 1.48167,-1.241777 0.22577,0 0.39511,0.112889 0.46566,0.324556 l 0.19756,-0.05644 0.21166,-1.199443 c -0.16933,-0.09878 -0.29633,-0.141111 -0.42333,-0.141111 -0.56444,0 -1.12889,0.507999 -2.00377,1.806221 l -0.52212,0.77611 -0.0847,-0.677333 c -0.16933,-1.396999 -0.55033,-1.904998 -1.38289,-1.904998 -0.36689,0 -0.67733,0.112889 -0.80433,0.296333 l -0.81845,1.171221 0.23989,0.141111 c 0.42334,-0.479777 0.70556,-0.677333 0.97367,-0.677333 0.46566,0 0.77611,0.578556 1.016,1.961443 l 0.15522,0.874889 -0.56444,0.874888 c -0.60678,0.945444 -1.08656,1.396999 -1.48167,1.396999 -0.21167,0 -0.36689,-0.05645 -0.39511,-0.127 l -0.15522,-0.395111 -0.28222,0.04233 c 0,0.282222 -0.0282,0.465667 -0.11289,0.917222 -0.0282,0.169333 -0.0423,0.211666 -0.0565,0.310444 z"
+       id="text1-7"
+       aria-label="x" />
+    <path
+       style="font-size:14.1111px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';stroke-linecap:square;stroke-miterlimit:8.6"
+       d="m 184.28983,91.354645 0.0988,0.606778 h 0.14112 l 1.82033,-0.818444 0.0423,-0.01411 c 0.0847,0 0.11289,0.127 0.11289,0.465666 v 6.843884 c 0,0.733777 -0.15522,0.888999 -0.91722,0.931332 l -0.79022,0.04233 v 0.423333 c 0.77611,-0.02822 1.55222,-0.04233 2.32833,-0.04233 0.73378,0 1.48166,0.01411 2.21544,0.04233 v -0.423333 l -0.73378,-0.04233 c -0.77611,-0.04233 -0.91722,-0.197555 -0.91722,-0.931332 v -8.367883 l -0.19755,-0.07056 c -0.91722,0.479777 -1.91911,0.90311 -3.20322,1.354665 z"
+       id="text1-7-3"
+       aria-label="1" />
+    <circle
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.135001;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:0.540004, 0.540004;stroke-dashoffset:0.121501"
+       id="path2-3"
+       cx="49.357498"
+       cy="165.51111"
+       r="9.6223764"
+       clip-path="url(#clipPath4-8)"
+       transform="matrix(7.4073528,0,0,7.4073528,-349.21161,-1135.6592)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ConcaveTriangle-9)"
+       d="M 27.681902,82.858119 H 191.49188"
+       id="path1-9" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ConcaveTriangle)"
+       d="M 17.71671,73.209533 V 14.638937"
+       id="path1" />
+    <circle
+       style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path2"
+       cx="49.357498"
+       cy="165.51111"
+       r="9.6223764"
+       clip-path="url(#clipPath4)"
+       transform="translate(-32.045861,-82.310863)" />
+    <rect
+       style="fill:#ffffff;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5"
+       width="15.08125"
+       height="10.847917"
+       x="81.028641"
+       y="83.359734" />
+    <rect
+       style="fill:#ffffff;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect6"
+       width="4.5309896"
+       height="3.2080729"
+       x="12.683463"
+       y="17.330147" />
+    <path
+       style="font-style:italic;font-size:14.1111px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella Italic';stroke-linecap:square;stroke-miterlimit:8.6"
+       d="m 13.484944,7.6957776 0.127,0.3809997 c 0.409222,-0.3245553 0.790221,-0.4515552 1.28411,-0.4515552 0.352777,0 0.747888,0.056444 1.481665,0.2398887 0.846666,0.1975554 1.28411,0.282222 1.66511,0.282222 0.169333,0 0.296333,-0.028222 0.705555,-0.141111 0.155222,-0.8748882 0.268111,-1.3546656 0.423333,-2.0178873 h -0.310444 l -0.310444,0.846666 c -0.09878,0.2539998 -0.254,0.3527775 -0.550333,0.3527775 -0.310444,0 -0.635,-0.084667 -0.945444,-0.1552221 -0.465666,-0.098778 -0.945444,-0.1693332 -1.213554,-0.1693332 -0.451556,0 -0.832555,0.084667 -1.340555,0.2963331 l 4.783663,-5.3904403 0.08467,-0.4515552 -0.127,-0.1269999 -0.324556,0.3245553 c -0.141111,0.141111 -0.282222,0.1975554 -0.479777,0.1975554 -0.479777,0 -1.213555,-0.1128888 -1.890887,-0.2963331 -0.366889,-0.098778 -0.747889,-0.2257776 -1.128888,-0.2257776 -0.239889,0 -0.522111,0.042333 -0.860778,0.141111 l -0.451555,1.7215543 h 0.296333 l 0.423333,-0.8184439 c 0.239889,-0.056444 0.366889,-0.070555 0.550333,-0.070555 0.197556,0 0.352778,0.014111 0.635,0.070555 0.479777,0.098778 0.846666,0.1411111 1.142999,0.1411111 0.507999,0 0.846666,-0.084667 1.312332,-0.3245554 z"
+       id="text1-7-1"
+       aria-label="z" />
+    <path
+       style="font-style:italic;font-size:14.1111px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella Italic';stroke-linecap:square;stroke-miterlimit:8.6"
+       d="m 81.009241,99.807203 c 0.620889,-0.02822 1.241777,-0.04233 1.862666,-0.04233 0.578555,0 1.15711,0.01411 1.735665,0.04233 l 0.04233,-0.395111 -0.691444,-0.04233 c -0.380999,-0.02822 -0.507999,-0.127 -0.507999,-0.423333 0,-0.127 0.01411,-0.225778 0.05644,-0.493889 l 0.592666,-3.485441 c 0,0 1.580444,-0.04233 2.596443,-0.04233 1.015999,0 2.596442,0.04233 2.596442,0.04233 l -0.564444,3.033886 c -0.127,0.691444 -0.225777,1.086555 -0.296333,1.171221 -0.05644,0.112889 -0.211666,0.183445 -0.522111,0.197556 l -0.705555,0.04233 -0.05644,0.395111 c 0.663222,-0.02822 1.326443,-0.04233 1.989665,-0.04233 0.620889,0 1.241777,0.01411 1.862665,0.04233 l 0.04233,-0.395111 -0.818444,-0.04233 c -0.366889,-0.01411 -0.508,-0.127 -0.508,-0.423333 0,-0.127 0.01411,-0.254 0.05644,-0.493889 l 1.298221,-7.337772 c 0.09878,-0.550333 0.183444,-0.634999 0.719666,-0.677333 l 0.508,-0.04233 0.04233,-0.395111 c -0.508,0.02822 -1.001888,0.04233 -1.509888,0.04233 -0.677333,0 -1.354665,-0.01411 -2.017887,-0.04233 l -0.04233,0.395111 0.677332,0.02822 c 0.338667,0.01411 0.493889,0.127 0.493889,0.381 0,0.197555 -0.05645,0.649111 -0.127,1.072444 l -0.423333,2.455331 h -5.221107 l 0.592666,-3.217331 c 0.09878,-0.550333 0.197555,-0.634999 0.719666,-0.677333 l 0.592666,-0.04233 0.04233,-0.395111 c -0.536222,0.02822 -1.072444,0.04233 -1.608666,0.04233 -0.663221,0 -1.326443,-0.01411 -1.989665,-0.04233 l -0.04233,0.395111 0.663222,0.02822 c 0.338666,0.01411 0.493888,0.127 0.493888,0.381 0,0.197555 -0.05644,0.635 -0.127,1.072444 l -1.044221,6.124217 c -0.225778,1.298221 -0.254,1.326444 -0.818444,1.368777 l -0.578555,0.04233 z"
+       id="text1-7-6"
+       aria-label="H" />
+    <path
+       style="font-size:14.1111px;font-family:Tempora;-inkscape-font-specification:Tempora;stroke-linecap:square;stroke-miterlimit:8.6"
+       d="m 31.900675,68.443632 c 0,-0.620889 -0.26811,-0.804333 -0.663221,-0.804333 -0.451556,0 -0.762,0.381 -0.762,0.846666 0,0.366888 0.169333,0.719666 0.169333,1.100666 0,1.044221 -1.001888,2.243665 -1.495776,3.316108 h -0.02822 c -0.268111,-1.086555 -0.987777,-5.26344 -2.398887,-5.26344 -1.030111,0 -1.058333,1.467554 -1.058333,2.201331 h 0.268111 c 0,-0.39511 0.169333,-0.90311 0.649111,-0.90311 1.03011,0 2.328331,3.471331 2.328331,4.402663 0,0.141111 -0.282222,0.832555 -0.352777,1.030111 -0.211667,0.634999 -0.352778,1.213554 -0.352778,1.890887 0,0.395111 0.183444,0.959555 0.663222,0.959555 0.564444,0 0.733777,-0.536222 0.733777,-1.001888 0,-0.550333 -0.05644,-1.227666 -0.183444,-1.862666 -0.07056,-0.324555 -0.169333,-0.64911 -0.169333,-0.973665 0,-0.324556 2.652886,-3.936997 2.652886,-4.938885 z"
+       id="text1-7-6-0"
+       aria-label="γ" />
+    <path
+       style="font-style:italic;font-size:14.1111px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella Italic';stroke-linecap:square;stroke-miterlimit:8.6"
+       d="m 0.81068504,24.031887 c 0.62088846,-0.02822 1.24177686,-0.04233 1.86266526,-0.04233 0.5785551,0 1.1571102,0.01411 1.7356653,0.04233 l 0.042333,-0.395111 -0.6914439,-0.04233 c -0.3809997,-0.02822 -0.5079996,-0.127 -0.5079996,-0.423333 0,-0.127 0.014111,-0.225778 0.056444,-0.493889 L 3.901016,19.191779 c 0,0 1.5804432,-0.04233 2.5964424,-0.04233 1.0159992,0 2.5964425,0.04233 2.5964425,0.04233 l -0.564444,3.033887 c -0.127,0.691444 -0.2257777,1.086555 -0.2963332,1.171221 -0.056444,0.112889 -0.2116665,0.183445 -0.5221107,0.197556 l -0.705555,0.04233 -0.056444,0.395111 c 0.6632217,-0.02822 1.3264434,-0.04233 1.9896652,-0.04233 0.6208884,0 1.2417772,0.01411 1.8626652,0.04233 l 0.04233,-0.395111 -0.818444,-0.04233 c -0.3668881,-0.01411 -0.5079991,-0.127 -0.5079991,-0.423333 0,-0.127 0.014111,-0.254 0.056444,-0.493889 l 1.2982207,-7.337772 c 0.09878,-0.550333 0.183445,-0.634999 0.719667,-0.677333 l 0.507999,-0.04233 0.04233,-0.395111 c -0.508,0.02822 -1.001889,0.04233 -1.509888,0.04233 -0.677333,0 -1.3546658,-0.01411 -2.0178875,-0.04233 l -0.042333,0.395111 0.6773328,0.02822 c 0.3386664,0.01411 0.4938885,0.127 0.4938885,0.381 0,0.197555 -0.056444,0.64911 -0.1269999,1.072443 L 9.1926786,18.55678 H 3.9715715 l 0.5926662,-3.217331 c 0.098778,-0.550333 0.1975554,-0.634999 0.7196661,-0.677333 l 0.5926662,-0.04233 0.042333,-0.395111 c -0.5362218,0.02822 -1.0724436,0.04233 -1.6086654,0.04233 -0.6632217,0 -1.3264434,-0.01411 -1.9896651,-0.04233 l -0.042333,0.395111 0.6632217,0.02822 c 0.3386664,0.01411 0.4938885,0.127 0.4938885,0.381 0,0.197555 -0.056444,0.634999 -0.1269999,1.072443 l -1.0442214,6.124218 c -0.2257776,1.298221 -0.2539998,1.326443 -0.8184438,1.368777 l -0.57855516,0.04233 z"
+       id="text1-7-6-2"
+       aria-label="H" />
+    <path
+       style="font-size:14.1111px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';stroke-linecap:square;stroke-miterlimit:8.6"
+       d="m 79.15286,49.262941 c 0.832555,-0.02822 1.326444,-0.04233 2.060221,-0.04233 0.733777,0 1.241777,0.01411 2.074331,0.04233 v -0.423333 l -0.677332,-0.04233 c -0.649111,-0.04233 -0.719666,-0.155222 -0.719666,-1.269999 v -7.365995 c 0.451555,-0.09878 0.663221,-0.112888 1.608665,-0.112888 0.550333,0 1.354666,0.08467 1.777999,0.197555 0.352777,0.08467 0.409222,0.141111 0.409222,0.479777 v 0.917222 h 0.493888 c 0,-0.846666 0.07056,-1.523999 0.225778,-2.144887 l -1.721555,-0.04233 -1.509887,0.01411 c -0.677333,0.01411 -1.199444,0.02822 -1.523999,0.02822 -0.451555,0 -1.015999,0 -2.158998,-0.02822 l -0.338667,-0.01411 v 0.423333 l 0.677333,0.04233 c 0.649111,0.04233 0.719666,0.155222 0.719666,1.269999 v 6.335884 c 0,1.114777 -0.07055,1.227665 -0.719666,1.269999 l -0.677333,0.04233 z"
+       id="text1-7-6-2-3"
+       aria-label="Γ" />
+    <g
+       id="text1-7-9"
+       style="font-size:14.1111px;font-family:Serif;-inkscape-font-specification:Serif;fill:none;stroke:#000000;stroke-linecap:square;stroke-miterlimit:8.6"
+       aria-label="rw">
+      <path
+         style="font-style:italic;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella Italic';fill:#000000;stroke:none"
+         d="m 24.146727,91.326422 0.09878,0.282222 0.451555,-0.296333 c 0.395111,-0.254 0.550333,-0.324555 0.677333,-0.324555 0.141111,0 0.239889,0.127 0.239889,0.310444 0,0.818444 -0.606778,3.72533 -1.171222,5.531551 l 0.141111,0.09878 c 0.310444,-0.09878 0.620889,-0.155222 0.945444,-0.211667 l 0.366889,-1.693332 c 0.253999,-1.171221 0.578555,-1.919109 1.199443,-2.723442 0.479778,-0.620888 0.860777,-0.917222 1.171221,-0.917222 0.211667,0 0.352778,0.07056 0.508,0.268111 h 0.197555 c 0.04233,-0.536221 0.112889,-0.987777 0.225778,-1.566332 -0.155222,-0.07055 -0.211666,-0.08467 -0.282222,-0.08467 -0.437444,0 -0.874888,0.338666 -1.382888,1.058332 -0.479777,0.691444 -0.973666,1.368777 -1.326443,2.130776 l 0.366888,-1.777998 c 0.07056,-0.310445 0.169334,-0.635 0.169334,-0.959555 0,-0.282222 -0.112889,-0.451555 -0.324556,-0.451555 -0.296333,0 -0.832555,0.296333 -1.876776,1.044221 z"
+         id="path8" />
+      <path
+         style="font-style:italic;font-size:9.17221px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella Italic';baseline-shift:sub;fill:#000000;stroke:none"
+         d="m 29.461672,96.39513 h 0.201789 l 0.155928,-0.385233 c 0.0642,-0.155928 0.24765,-0.256823 0.467783,-0.256823 0.174272,0 0.339372,0.01834 0.513644,0.01834 0.192616,0 0.311855,-0.0092 0.54116,-0.03669 -0.08255,0.119239 -0.183444,0.220133 -0.275166,0.3302 -0.825499,0.963082 -1.137355,1.623482 -1.137355,2.40312 0,0.752122 0.321028,1.256593 0.807155,1.256593 0.587022,0 1.063977,-0.504471 1.742721,-1.816098 -0.08255,0.403577 -0.110067,0.632883 -0.110067,0.843844 0,0.577849 0.265995,0.972254 0.678744,0.972254 0.74295,0 1.706032,-0.926393 2.274709,-2.182987 0.201789,-0.45861 0.357717,-1.073149 0.357717,-1.440037 0,-0.522817 -0.238478,-0.898877 -0.568678,-0.898877 -0.119238,0 -0.229305,0.03669 -0.302683,0.110066 l -0.45861,0.431094 0.100894,0.174272 c 0.08255,-0.05503 0.1651,-0.08255 0.24765,-0.08255 0.24765,0 0.394405,0.210961 0.394405,0.57785 0,1.329971 -0.889705,2.852559 -1.669343,2.852559 -0.265994,0 -0.458611,-0.366889 -0.458611,-0.871361 0,-0.431094 0.08255,-1.03646 0.192617,-1.430865 l 0.476955,-1.687688 -0.06421,-0.07338 -0.678743,0.201788 -0.265995,1.36666 c -0.110066,0.568678 -0.238477,0.935566 -0.504471,1.430866 -0.366889,0.687916 -0.715433,1.063977 -0.9906,1.063977 -0.321027,0 -0.531988,-0.357717 -0.531988,-0.889705 0,-1.091494 0.376061,-1.981198 1.28411,-3.008487 l -0.09172,-0.165099 c -0.183444,0.08255 -0.302683,0.110066 -0.559505,0.110066 -0.376061,0 -0.752122,-0.03669 -1.128183,-0.06421 -0.110066,-0.0092 -0.192616,0.01834 -0.293511,0.06421 -0.128411,0.24765 -0.229305,0.57785 -0.348544,1.082322 z"
+         id="path9" />
+    </g>
+    <path
+       style="font-size:14.1111px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella';stroke-linecap:square;stroke-miterlimit:8.6"
+       d="m 13.532351,86.681315 c 0,1.650998 0.296333,3.07622 0.790221,3.767663 0.493889,0.691444 1.284111,1.086555 2.158999,1.086555 2.130776,0 3.203219,-1.834443 3.203219,-5.446885 0,-3.09033 -0.917221,-4.557885 -2.850442,-4.557885 -2.18722,0 -3.301997,1.735665 -3.301997,5.150552 z m 1.185332,-0.508 c 0,-2.977442 0.522111,-4.148663 1.862665,-4.148663 1.368777,0 1.91911,1.382887 1.91911,4.769551 0,3.005665 -0.536222,4.247442 -1.834443,4.247442 -1.368777,0 -1.947332,-1.425221 -1.947332,-4.86833 z"
+       id="text1-7-3-8"
+       aria-label="0" />
+    <g
+       id="g6"
+       transform="translate(-7.9375004,-65.087535)">
+      <path
+         style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+         d="m 25.234635,136.78958 -4.299479,3.73724"
+         id="path6" />
+      <path
+         style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+         d="m 25.212414,132.10407 -4.299479,3.73724"
+         id="path6-6" />
+      <path
+         style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+         d="m 25.113194,127.04392 -4.299479,3.73724"
+         id="path6-6-0" />
+      <path
+         style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+         d="m 25.234635,122.17135 -4.299479,3.73724"
+         id="path6-3" />
+      <path
+         style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+         d="m 25.212414,117.48584 -4.299479,3.73724"
+         id="path6-6-7" />
+      <path
+         style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+         d="m 25.113194,112.42569 -4.299479,3.73724"
+         id="path6-6-0-9" />
+      <path
+         style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+         d="m 25.234635,107.22239 -4.299479,3.73724"
+         id="path6-1" />
+      <path
+         style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+         d="m 25.212414,102.53688 -4.299479,3.73724"
+         id="path6-6-9" />
+      <path
+         style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+         d="m 25.113194,97.476734 -4.299479,3.737236"
+         id="path6-6-0-4" />
+      <path
+         style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+         d="m 25.106238,92.067402 -4.299479,3.73724"
+         id="path6-5" />
+      <path
+         style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+         d="m 25.084017,87.381892 -4.299479,3.73724"
+         id="path6-6-95" />
+    </g>
+    <g
+       id="g7"
+       transform="translate(-7.9375004,-65.087535)">
+      <g
+         id="g6-3"
+         transform="rotate(90,55.618532,114.30238)">
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.234635,136.78958 -4.299479,3.73724"
+           id="path6-7" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.212414,132.10407 -4.299479,3.73724"
+           id="path6-6-2" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.113194,127.04392 -4.299479,3.73724"
+           id="path6-6-0-7" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.234635,122.17135 -4.299479,3.73724"
+           id="path6-3-3" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.212414,117.48584 -4.299479,3.73724"
+           id="path6-6-7-3" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.113194,112.42569 -4.299479,3.73724"
+           id="path6-6-0-9-9" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.234635,107.22239 -4.299479,3.73724"
+           id="path6-1-2" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.212414,102.53688 -4.299479,3.73724"
+           id="path6-6-9-4" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.113194,97.476734 -4.299479,3.737236"
+           id="path6-6-0-4-4" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.106238,92.067402 -4.299479,3.73724"
+           id="path6-5-4" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.084017,87.381892 -4.299479,3.73724"
+           id="path6-6-95-9" />
+      </g>
+      <g
+         id="g6-3-3"
+         transform="rotate(90,83.207968,141.81164)">
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.234635,136.78958 -4.299479,3.73724"
+           id="path6-7-2" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.212414,132.10407 -4.299479,3.73724"
+           id="path6-6-2-9" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.113194,127.04392 -4.299479,3.73724"
+           id="path6-6-0-7-5" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.234635,122.17135 -4.299479,3.73724"
+           id="path6-3-3-4" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.212414,117.48584 -4.299479,3.73724"
+           id="path6-6-7-3-3" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.113194,112.42569 -4.299479,3.73724"
+           id="path6-6-0-9-9-9" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.234635,107.22239 -4.299479,3.73724"
+           id="path6-1-2-4" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.212414,102.53688 -4.299479,3.73724"
+           id="path6-6-9-4-9" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.113194,97.476734 -4.299479,3.737236"
+           id="path6-6-0-4-4-5" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.106238,92.067402 -4.299479,3.73724"
+           id="path6-5-4-5" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.084017,87.381892 -4.299479,3.73724"
+           id="path6-6-95-9-7" />
+      </g>
+      <g
+         id="g6-3-7"
+         transform="rotate(90,110.61974,169.05569)">
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.234635,136.78958 -4.299479,3.73724"
+           id="path6-7-27" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.212414,132.10407 -4.299479,3.73724"
+           id="path6-6-2-2" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.113194,127.04392 -4.299479,3.73724"
+           id="path6-6-0-7-9" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.234635,122.17135 -4.299479,3.73724"
+           id="path6-3-3-0" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.212414,117.48584 -4.299479,3.73724"
+           id="path6-6-7-3-5" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.113194,112.42569 -4.299479,3.73724"
+           id="path6-6-0-9-9-0" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.234635,107.22239 -4.299479,3.73724"
+           id="path6-1-2-41" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.212414,102.53688 -4.299479,3.73724"
+           id="path6-6-9-4-7" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.113194,97.476734 -4.299479,3.737236"
+           id="path6-6-0-4-4-9" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.106238,92.067402 -4.299479,3.73724"
+           id="path6-5-4-3" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.084017,87.381892 -4.299479,3.73724"
+           id="path6-6-95-9-6" />
+      </g>
+    </g>
+    <g
+       id="g7-5"
+       transform="translate(2.9590929,65.11464)">
+      <g
+         id="g6-3-39"
+         transform="rotate(90,83.66433,80.965084)">
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.234635,136.78958 -4.299479,3.73724"
+           id="path6-7-1" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.212414,132.10407 -4.299479,3.73724"
+           id="path6-6-2-8" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.113194,127.04392 -4.299479,3.73724"
+           id="path6-6-0-7-8" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.234635,122.17135 -4.299479,3.73724"
+           id="path6-3-3-7" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.212414,117.48584 -4.299479,3.73724"
+           id="path6-6-7-3-0" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.113194,112.42569 -4.299479,3.73724"
+           id="path6-6-0-9-9-5" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.234635,107.22239 -4.299479,3.73724"
+           id="path6-1-2-2" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.212414,102.53688 -4.299479,3.73724"
+           id="path6-6-9-4-79" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.113194,97.476734 -4.299479,3.737236"
+           id="path6-6-0-4-4-1" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.106238,92.067402 -4.299479,3.73724"
+           id="path6-5-4-9" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.084017,87.381892 -4.299479,3.73724"
+           id="path6-6-95-9-63" />
+      </g>
+      <g
+         id="g6-3-3-6"
+         transform="rotate(90,111.25364,108.47456)">
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.234635,136.78958 -4.299479,3.73724"
+           id="path6-7-2-8" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.212414,132.10407 -4.299479,3.73724"
+           id="path6-6-2-9-4" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.113194,127.04392 -4.299479,3.73724"
+           id="path6-6-0-7-5-6" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.234635,122.17135 -4.299479,3.73724"
+           id="path6-3-3-4-6" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.212414,117.48584 -4.299479,3.73724"
+           id="path6-6-7-3-3-7" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.113194,112.42569 -4.299479,3.73724"
+           id="path6-6-0-9-9-9-2" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.234635,107.22239 -4.299479,3.73724"
+           id="path6-1-2-4-7" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.212414,102.53688 -4.299479,3.73724"
+           id="path6-6-9-4-9-4" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.113194,97.476734 -4.299479,3.737236"
+           id="path6-6-0-4-4-5-1" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.106238,92.067402 -4.299479,3.73724"
+           id="path6-5-4-5-0" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m 25.084017,87.381892 -4.299479,3.73724"
+           id="path6-6-95-9-7-0" />
+      </g>
+      <g
+         id="g6-3-7-6"
+         transform="rotate(90,110.61974,169.05569)">
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m -36.148725,142.08128 -4.299479,3.73724"
+           id="path6-7-27-4" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m -36.170946,137.39577 -4.299479,3.73724"
+           id="path6-6-2-2-4" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m -36.270166,132.33562 -4.299479,3.73724"
+           id="path6-6-0-7-9-3" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m -36.148725,127.46305 -4.299479,3.73724"
+           id="path6-3-3-0-7" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m -36.170946,122.77754 -4.299479,3.73724"
+           id="path6-6-7-3-5-3" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m -36.270166,117.71739 -4.299479,3.73724"
+           id="path6-6-0-9-9-0-4" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m -36.148725,112.51409 -4.299479,3.73724"
+           id="path6-1-2-41-7" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m -36.170946,107.82858 -4.299479,3.73724"
+           id="path6-6-9-4-7-2" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m -36.270166,102.76842 -4.299479,3.73725"
+           id="path6-6-0-4-4-9-1" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8.6;stroke-dasharray:none;stroke-dashoffset:0.900001"
+           d="m -36.277122,97.359072 -4.299479,3.737248"
+           id="path6-5-4-3-7" />
+      </g>
+    </g>
+    <path
+       style="font-style:italic;font-size:14.1111px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella Italic';stroke-linecap:square;stroke-miterlimit:8.6"
+       d="m 44.164329,57.854067 c 0.592667,-0.02822 1.185333,-0.04233 1.777999,-0.04233 0.592666,0 1.185333,0.01411 1.777999,0.04233 l 0.04233,-0.395111 -0.733777,-0.04233 c -0.381,-0.02822 -0.508,-0.126999 -0.508,-0.409221 0,-0.09878 0.01411,-0.225778 0.02822,-0.296334 l 1.255888,-7.549438 c 0.09878,-0.550333 0.169334,-0.635 0.719666,-0.677333 l 0.493889,-0.04233 0.04233,-0.395111 c -0.52211,0.02822 -1.058332,0.04233 -1.580443,0.04233 -0.649111,0 -1.28411,-0.01411 -1.91911,-0.04233 l -0.04233,0.395111 0.663222,0.02822 c 0.338666,0.01411 0.493888,0.127 0.493888,0.366889 0,0.126999 -0.07055,0.77611 -0.127,1.086554 l -1.015999,6.124218 c -0.211666,1.255888 -0.254,1.326443 -0.818444,1.368776 l -0.507999,0.04233 z"
+       id="text1-7-6-1-5"
+       aria-label="I" />
+  </g>
+</svg>
