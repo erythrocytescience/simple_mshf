@@ -7,7 +7,7 @@ if [ -z "$1" ]; then
 fi
 
 COMMIT_MSG="$1"
-ZIP_FILE="${2:-simple mshf.zip}"   # по умолчанию ждём project.zip в папке проекта
+ZIP_FILE="simple mshf.zip"   # по умолчанию ждём project.zip в папке проекта
 PROJECT_DIR=$(pwd)
 SCRIPT_NAME=$(basename "$0")   # имя этого скрипта
 
