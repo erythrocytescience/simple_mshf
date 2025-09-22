@@ -42,7 +42,8 @@
 \captionsetup[subfigure]{labelformat=brace}
 % =================== SETTINGS END ==============================
 
-\title{ЧИСЛЕННО-АНАЛИТИЧЕСКАЯ МОДЕЛЬ ДЛЯ РАСЧЕТА ПРИТОКА ЖИДКОСТИ К ГОРИЗОНТАЛЬНОЙ СКВАЖИНЕ С МНОГОЗОННЫМ ГИДРОРАЗРЫВОМ ПЛАСТА}
+\title{ЧИСЛЕННО-АНАЛИТИЧЕСКАЯ МОДЕЛЬ ДЛЯ РАСЧЕТА ПРИТОКА ЖИДКОСТИ
+К ГОРИЗОНТАЛЬНОЙ СКВАЖИНЕ С МНОГОЗОННЫМ ГИДРОРАЗРЫВОМ ПЛАСТА}
 \author[1]{Мазо А.Б.}
 \author[1]{Поташев К.А.}
 \author[2]{Хамидуллин М.Р.}
@@ -68,8 +69,22 @@
 \addcontentsline{toc}{section}{Введение} % чтобы отображалось в содержании (текст должен совпадать)
 
 \section{Постановка задачи}
-Рассмотрим задачу о притоке однофазной жидкости к горизонтальной скважине (ГС), простимулированной многозонным гидравлическим разрывом пласта (МГРП) с трансверсальными трещинами конечной проводимости. Примем следующую схему ГС с МГРП (рис.~\ref{fig:kham_main_scheme}).
-Введем декартовую систему координат $xyz$ с вертикальной осью $z$ и осью $y$, направленной вдоль ствола скважины радиуса $r_w$ и длины $L$. Кровля и подошва пласта горизонтальные, толщина пласта постоянная и равна $2H$. Абсолютную проницаемость пласта обозначим через $k=k\left(x,y,z\right)$, а удельную (на единицу толщины пласта) гидропроводность $\sigma = k / \mu$, где $\mu$~--~вязкость флюида. Контур питания в плоскости $xy$ представим прямоугольником, размеры которого определяется системой разработки залежи. Стенки трещин представим парой прямугольных плоскостей размерами $2H \times 2h$ с расстоянием между ними $2\delta$ (ширина раскрытия трещины). Трещины МГРП имеют проницаемость $k_f$ и расположены на расстоянии $2d$ друг от друга, $\sigma_f$~--~удельная гидропроводность трещины.
+Рассмотрим задачу о притоке однофазной жидкости к горизонтальной скважине (ГС),
+простимулированной многозонным гидравлическим разрывом пласта (МГРП)
+с трансверсальными трещинами конечной проводимости. Примем следующую схему
+ГС с МГРП (рис.~\ref{fig:kham_main_scheme}).
+Введем декартовую систему координат $xyz$ с вертикальной осью $z$ и осью $y$,
+направленной вдоль ствола скважины радиуса $r_w$ и длины $L$.
+Кровля и подошва пласта горизонтальные, толщина пласта постоянная и равна $2H$.
+Абсолютную проницаемость пласта обозначим через $k=k\left(x,y,z\right)$,
+а удельную (на единицу толщины пласта)
+гидропроводность $\sigma = k / \mu$, где $\mu$~--~вязкость флюида.
+Контур питания в плоскости $xy$ представим прямоугольником, размеры которого
+определяется системой разработки залежи. Стенки трещин представим парой
+прямугольных плоскостей размерами $2H \times 2h$ с расстоянием между
+ними $2\delta$ (ширина раскрытия трещины). Трещины МГРП имеют проницаемость
+$k_f$ и расположены на расстоянии $2d$ друг от друга, $\sigma_f$~--~удельная
+гидропроводность трещины.
 
 \begin{figure}[!ht]
   \centering
@@ -77,7 +92,10 @@
   \caption{\label{fig:kham_main_scheme}Схема ГС с МГРП}
 \end{figure}
 
-Примем следующие упрощения: однофазное фильтрационное течение стационарно и определяется разностью давления $p_w$ на скважине и пластового давления $p_r$ на внешнем контуре; капиллярные и гравитационные силы не учитываются; падением давления $p_w$ на скважине можно пренебречь.
+Примем следующие упрощения: однофазное фильтрационное течение стационарно
+и определяется разностью давления $p_w$ на скважине и пластового давления
+$p_r$ на внешнем контуре; капиллярные и гравитационные силы не учитываются;
+падением давления $p_w$ на скважине можно пренебречь.
 
 Математическая модель фильтрации в безразмерных переменных
 \begin{equation}
@@ -94,7 +112,8 @@
   \end{gathered}
   \label{eq:kham_dimless}
 \end{equation}
-сводится  к уравнениям  давления $p$ в коллекторе и $p_f$ в трещинах гидроразрыва~\cite{ref:kham_mazo_uzku_2015}
+сводится  к уравнениям  давления $p$ в коллекторе и $p_f$ в трещинах
+гидроразрыва~\cite{ref:kham_mazo_uzku_2015}
 \begin{equation}
   \displaystyle
   - \text{div} \vec{u} = 0, \quad u=-\sigma \text{grad} p;
@@ -108,13 +127,23 @@
   \end{gathered}
   \label{eq:kham_main_p_fract}
 \end{equation}
-где $C_f$~--~безрамерная проводимость трещины, $I_h$~--~степень вскрытия~\cite{lit:kham_valko_economides_2001}.
+где $C_f$~--~безрамерная проводимость трещины, $I_h$~--~степень
+вскрытия~\cite{lit:kham_valko_economides_2001}.
 
-Граничные условия таковы: кровля и подошва пласта, торцы скважины и трещин непроницаемы, на боковых поверхностях трещин задается равенство давлений и нормальных компонент скорости. Аналогичные условия сопряжения ставятся и на боковой поверхности $r=\sqrt{x^2 + y^2} = r_w$ скважины: на ее перфорированных участках задается давление $p_w$, а на неперфорированных~--~условие изоляции; на контуре питания задается постоянное давление $p_r$.
+Граничные условия таковы: кровля и подошва пласта, торцы скважины и трещин
+непроницаемы, на боковых поверхностях трещин задается равенство давлений и
+нормальных компонент скорости. Аналогичные условия сопряжения ставятся и на
+боковой поверхности $r=\sqrt{x^2 + y^2} = r_w$ скважины: на ее перфорированных участках задается давление $p_w$, а на неперфорированных~--~условие изоляции; на контуре питания задается постоянное давление $p_r$.
 
 \section{Упрощенная методика расчета дебита ГС с МГРП}
-Задача (\ref{eq:kham_main_p_res}),~(\ref{eq:kham_main_p_fract}) может быть решена численно, однако, такой подход требует больших вычислительных затрат. Ниже предлагается упрощенная методика, основанная на учете различных видов симметрии фильтрационного течения в окрестности ГС с МГРП. При этом прямое численное моделирование будет использовано для уточнения приближенного решения.
-Постановка задачи и формулы для расчета притока жидкости к горизонтальной скважине без трещин МГРП получаются аналогично работе~\cite{ref:kham_mazo_uzku_2015}, с разницей лишь в масштабирующих коэффициентах. Для более детальных выводов можно обратиться к первоисточнику, в данный работе приведем только конечные формулы и проведем более детальный анализ применимости этих формул.
+Задача (\ref{eq:kham_main_p_res}),~(\ref{eq:kham_main_p_fract}) может быть
+решена численно, однако, такой подход требует больших вычислительных затрат.
+Ниже предлагается упрощенная методика, основанная на учете различных видов симметрии фильтрационного течения в окрестности ГС с МГРП. При этом прямое численное моделирование будет использовано для уточнения приближенного решения.
+Постановка задачи и формулы для расчета притока жидкости к горизонтальной
+скважине без трещин МГРП получаются аналогично работе~\cite{ref:kham_mazo_uzku_2015},
+с разницей лишь в масштабирующих коэффициентах. Для более детальных выводов
+можно обратиться к первоисточнику, в данный работе приведем только конечные
+формулы и проведем более детальный анализ применимости этих формул.
 
 % ==========================================================================
 % ==========================================================================
@@ -126,7 +155,12 @@
 
 % ====================== ОСНОВНОЙ СТВОЛ ===========================
 \subsubsection{Основной ствол скважины}
-Рассмотрим задачу о притоке однофазного флюида к ГС без трещин МГРП. Пласт считаем однородным. Пренебрегая падением давления вдоль ствола скважины, задачу можно свести к двумерной в плоскости $y = y0 \in \left(0, L\right)$ (рис.~\ref{fig:kham_well_pipe_scheme}) . Отметим, что плоский характер течения нарушается, когда y0 приближается к концам $y = 0$ и $y = L$; влияние концевых эффектов будет рассмотрено позже.
+Рассмотрим задачу о притоке однофазного флюида к ГС без трещин МГРП. Пласт
+считаем однородным. Пренебрегая падением давления вдоль ствола скважины,
+задачу можно свести к двумерной в плоскости $y = y0 \in \left(0, L\right)$
+(рис.~\ref{fig:kham_well_pipe_scheme}). Отметим, что плоский характер течения
+нарушается, когда y0 приближается к концам $y = 0$ и $y = L$; влияние концевых
+эффектов будет рассмотрено позже.
 
 \begin{figure}[!ht]
   \centering
@@ -135,7 +169,8 @@
   \label{fig:kham_well_pipe_scheme}
 \end{figure}
 
-Утверждается, что в подобласти (II) $H \leq x \leq 1$ течение плоско-параллельное. При этом расход и давление определяются как
+Утверждается, что в подобласти (II) $H \leq x \leq 1$ течение плоско-параллельное.
+При этом расход и давление определяются как
 \begin{equation}
   \displaystyle
   q^{II} = \dfrac{H \left(1-p_{\Gamma}\right)}{1-H}, \;\;\;
@@ -143,24 +178,37 @@
   \label{eq:kham_hw_inner_par_qp}
 \end{equation}
 где~$p_{\Gamma}$~--~подлежащее определению давление при $x=H$.
-Далее предполагается, что на окружности $\Gamma=\left\{\left(x,y\right): \sqrt{x^2 + z^2} = H \right\}$ давление близко к постоянному $p_{\Gamma}$ при $x=H$.
-Тогда в подобласти (I), ограниченной окружностями $\gamma$ и $\Gamma$ и лучами $x = 0$ и $z = 0$, фильтрация будет плоско-радиальной
+Далее предполагается, что на окружности
+$\Gamma=\left\{\left(x,y\right): \sqrt{x^2 + z^2} = H \right\}$
+давление близко к постоянному $p_{\Gamma}$ при $x=H$.
+Тогда в подобласти (I), ограниченной окружностями $\gamma$ и $\Gamma$ и
+лучами $x = 0$ и $z = 0$, фильтрация будет плоско-радиальной
 \begin{equation}
   \displaystyle
   q^I = \theta \dfrac{\pi p_{\Gamma}}{2 \ln{\left(H/r_w\right)}}, \;\;\;
   p^I(r) = p_{\Gamma} \dfrac{\ln{\left(r/r_w\right)}}{\ln{\left(H/r_w\right)}}.
   \label{eq:kham_hw_inner_rad_qp}
 \end{equation}
-Здесь $\theta$~--~поправочный коэффициент, значение которого определяется при сопоставлении $q^I$ из (\ref{eq:kham_hw_inner_rad_qp}) с ``точным'' значением расхода, полученным с помощью численного решения. Поправочный коэффициент вводится из-за того, что мы снесли давление $p_{\Gamma}$ с $x= H$ на окружность $\Gamma$ радиуса $H$.
+Здесь $\theta$~--~поправочный коэффициент, значение которого определяется
+при сопоставлении $q^I$ из (\ref{eq:kham_hw_inner_rad_qp}) с ``точным''
+значением расхода, полученным с помощью численного решения. Поправочный
+коэффициент вводится из-за того, что мы снесли давление $p_{\Gamma}$ с $x= H$
+на окружность $\Gamma$ радиуса $H$.
 
-Приравняв значения расходов $q^I$ из (\ref{eq:kham_hw_inner_rad_qp}) и $q^{II}$ (\ref{eq:kham_hw_inner_par_qp}), найдем
+Приравняв значения расходов $q^I$ из (\ref{eq:kham_hw_inner_rad_qp})
+и $q^{II}$ (\ref{eq:kham_hw_inner_par_qp}), найдем
 \begin{equation}
   \displaystyle
-  p_{\Gamma} = \dfrac{2 H \ln{\left(H/r_w\right)}}{2 H \ln{\left(H/r_w\right) + \pi \theta \left(1 - H\right)}}
+  p_{\Gamma} = \dfrac{2 H \ln{\left(H/r_w\right)}}{2 H \ln{\left(H/r_w\right)
+  + \pi \theta \left(1 - H\right)}}
   \label{eq:kham_pgr_inner_section}
 \end{equation}
-Для завершения описания модели необходимо указать, как формируется итоговое распределение
-давления во всей области. После определения давления на границе $p_{\Gamma}$ по формуле (\ref{eq:kham_pgr_inner_section}) и получения выражений для давления в подобластях, итоговое распределение давления во всей области определяется кусочно-заданной функцией, которая непрерывно склеивается на границе
+Для завершения описания модели необходимо указать, как формируется итоговое
+распределение давления во всей области. После определения давления на
+границе $p_{\Gamma}$ по формуле (\ref{eq:kham_pgr_inner_section}) и получения
+выражений для давления в подобластях, итоговое распределение давления во всей
+области определяется кусочно-заданной функцией, которая непрерывно склеивается
+на границе
 $\Gamma$
 \begin{equation}
   p =
@@ -176,13 +224,21 @@ $\Gamma$
   Q_w^P = \dfrac{2\pi L p_{\Gamma}}{\ln{\left(H/r_w\right)}}
   \label{eq:kham_qw_inner}
 \end{equation}
-Поправочный коэффициент $\theta$ определяется по формуле, которая получается из равенства двух дебитов $Q_w^P$ и $Q_{\text{num}}$
+Поправочный коэффициент $\theta$ определяется по формуле, которая получается
+из равенства двух дебитов $Q_w^P$ и $Q_{\text{num}}$
 \begin{equation}
   \displaystyle
-  \theta = \dfrac{H}{1-H} \left(\dfrac{4L}{Q_{\text{num}}} - \dfrac{2}{\pi} \ln \left(\dfrac{H}{r_w}\right)\right),
+  \theta = \dfrac{H}{1-H} \left(\dfrac{4L}{Q_{\text{num}}}
+  - \dfrac{2}{\pi} \ln \left(\dfrac{H}{r_w}\right)\right),
   \label{eq:kham_theta_inner}
 \end{equation}
-где $Q_{\text{num}}$~--~дебит, полученный из численного решения при решении аналогичной задачи. Для его определения будем использовать MRST~\cite{lit:kham_mrst}. Важно отметить, что численное решение должно быть получено для случая, когда левая и правая границы пласта совпадают с координатами торцов скважины и на этих границах задается условие непроницаемости. Это делается для того, чтобы исключить нерадиальный приток у торцов скважины, так как аналитическое решение получено именно для такого случая.
+где $Q_{\text{num}}$~--~дебит, полученный из численного решения при решении
+аналогичной задачи. Для его определения будем использовать MRST~\cite{lit:kham_mrst}.
+Важно отметить, что численное решение должно быть получено для случая, когда левая
+и правая границы пласта совпадают с координатами торцов скважины и на этих границах
+задается условие непроницаемости. Это делается для того, чтобы исключить
+нерадиальный приток у торцов скважины, так как аналитическое решение получено
+именно для такого случая.
 
 Для оценки ошибки между численными и аналитическими величина введем обозначение
 \begin{equation}
@@ -314,7 +370,7 @@ Q_w^E = \dfrac{2\pi p_{\Gamma} H r_w}{\left(H - r_w\right)}
 Поправочный коэффициент $\theta$ будем определять из условия равенства численного и аналитического дебитов $Q_w^E = Q_{\text{num}}$. Тогда $\theta$ по формулам (\ref{eq:kham_hw_outer_Q}) и (\ref{eq:kham_hw_outer_pg}) будет
 \begin{equation}
 \displaystyle
-\theta = \dfrac{Q_{\text{num}} \left(H - r_w \right) - 2 \pi H r_w}{r_w Q_{\text{num}} \ln{H}}
+\theta = \dfrac{Q_{\text{num}} \left(H - r_w \right) - 2 \pi H r_w}{r_w Q_{\text{num}} \ln{H} \right}
 \label{eq:kham_theta_spheric}
 \end{equation}
 
@@ -420,7 +476,10 @@ $H=0.25, r=0.0005$ & $1.82$ & $0.39$ & $1.8$ \\
 \end{tabular}
 \end{table}
 
-Для корректно учета сферического течения на торцах скважина воспользуемся численной моделью~\cite{lit:kham_mazo_uzku_2015}, в которой реализованы поправочные коэффициенты (радиальный и сферический) для вычисления нормальной скорости на поверхности скважины.
+Для корректно учета сферического течения на торцах скважина воспользуемся
+численной моделью~\cite{lit:kham_mazo_uzku_2015}, в которой реализованы
+поправочные коэффициенты (радиальный и сферический) для вычисления нормальной
+скорости на поверхности скважины.
 
 \begin{figure}[!ht]
 \centering
@@ -516,8 +575,8 @@ $H=0.25, r=0.0005$ & $1.13 \cdot 10^{-3}$ & $1.51 \cdot 10^{-3}$ & $1.13 \cdot 1
 
 Оценим долю притока с торцов скважины.
 
-На рис.~\ref{eq:kham_qsph_qan_an_L5} приведены поля $Q_w^E / Q_w^P$, вычисленные по аналитическим формулам (\ref{eq:eq:kham_qw_inner}) и (\ref{eq:eq:kham_qw_outer}) (на самом деле тут $2 Q_w^E$, так как торцов два).
-Ясно, что для толстой скважины и/или тонкого пласта эффект от сферического притока будет более существенным, что подтверждается расчетами (рис.~\ref{eq:kham_qsph_qan_an_L5})
+На рис.~\ref{eq:kham_qsph_qan_an_L5} приведены поля $Q_w^E / Q_w_P$, вычисленные по аналитическим формулам (\ref{eq:eq:kham_qw_inner}) и (\ref{eq:eq:kham_qw_outer}) (на самом деле тут $2 Q_w^E$, так как торцов два).
+Ясно, что для толстой скважины и\или тонкого пласта эффект от сферического притока будет более существенным, что подтверждается расчетами (рис.~\ref{eq:kham_qsph_qan_an_L5})
 
 \begin{figure}[h!]
 \centering
@@ -659,7 +718,29 @@ $H=0.25, r=0.0005$ & $1.13 \cdot 10^{-3}$ & $1.51 \cdot 10^{-3}$ & $1.13 \cdot 1
 \label{fig:kham_rad_hypo_fault_p_over_l}
 \end{figure}
 
-{\color{red} + добавить такой график: два распределения давления: сферическое и радиальное, а между ними численное в разных точках вдоль скважины: самый торц, середина и 1-2 между ними. чтобы показать как происходит переход от радиального к сферическому}
+\begin{figure}[h!]
+\centering
+\begin{subfigure}{0.3\textwidth}
+\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_py_L05_rw0001_H015_mgrp.svg}
+\caption{}
+\label{eq:kham_py_L05_rw0001_H015_mgrp}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.3\textwidth}
+\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_py_L2_rw0001_H015_mgrp.svg}
+\caption{}
+\label{eq:kham_py_L2_rw0001_H015_mgrp}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.3\textwidth}
+\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_py_L10_rw0001_H015_mgrp.svg}
+\caption{}
+\label{eq:kham_py_L10_rw0001_H015_mgrp}
+\end{subfigure}
+
+\caption{Давление в ортогональных к скважинии линиях для различных относительных координат вдоль ствола ($H=0.15, \; r_w = 0.0001$) : а) $L=0.5$}
+\label{fig:kham_rad_hypo_fault_p_over_l}
+\end{figure}
 
 Как видно из рис.~\ref{fig:kham_rad_hypo_fault_p_over_l} вблизи торцов скважины давление существенно отличается от радиального и еще более сильно от сферического.
 Это означает, что мы не можем считать, что на всей протяженности основного ствола скважины наблюдается ``чистый'' радиальный приток.
@@ -672,60 +753,63 @@ $H=0.25, r=0.0005$ & $1.13 \cdot 10^{-3}$ & $1.51 \cdot 10^{-3}$ & $1.13 \cdot 1
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.05_L0.5.svg}
 \caption{}
-\label{eq:kham_rad_hypo_fault_q_l_H005_L05}
+\label{fig:kham_rad_hypo_fault_q_l_H005_L05}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.05_L1.svg}
 \caption{}
-\label{eq:kham_rad_hypo_fault_q_l_H005_L1}
+\label{fig:kham_rad_hypo_fault_q_l_H005_L1}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.05_L5.svg}
 \caption{}
-\label{eq:kham_rad_hypo_fault_q_l_H005_L5}
+\label{fig:kham_rad_hypo_fault_q_l_H005_L5}
 \end{subfigure}
 
 % --- Второй ряд ---
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.15_L0.5.svg}
 \caption{}
-\label{eq:kham_rad_hypo_fault_q_l_H015_L05}
+\label{fig:kham_rad_hypo_fault_q_l_H015_L05}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.15_L1.svg}
 \caption{}
-\label{eq:kham_rad_hypo_fault_q_l_H015_L1}
+\label{fig:kham_rad_hypo_fault_q_l_H015_L1}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.15_L5.svg}
 \caption{}
-\label{eq:kham_rad_hypo_fault_q_l_H015_L5}
+\label{fig:kham_rad_hypo_fault_q_l_H015_L5}
 \end{subfigure}
 
 % --- Third row ---
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.25_L0.5.svg}
 \caption{}
-\label{eq:kham_rad_hypo_fault_q_l_H025_L05}
+\label{fig:kham_rad_hypo_fault_q_l_H025_L05}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.25_L1.svg}
 \caption{}
-\label{eq:kham_rad_hypo_fault_q_l_H025_L1}
+\label{fig:kham_rad_hypo_fault_q_l_H025_L1}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.25_L5.svg}
 \caption{}
-\label{eq:kham_rad_hypo_fault_q_l_H025_L5}
+\label{fig:kham_rad_hypo_fault_q_l_H025_L5}
 \end{subfigure}
 
-\caption{$E_q$ вдоль ствола скважины (сплошная линия~--~численное решение, пунктирная~--~аналитическое)}
+\caption{
+$E_q$ вдоль ствола скважины (расчеты сделаны по модели~\cite{lit:kham_mazo_uzku_2015});
+\\ (сплошная линия~--~численное решение, пунктирная~--~аналитическое)
+}
 \label{fig:kham_rad_hypo_fault_q_l}
 \end{figure}
 
@@ -736,46 +820,162 @@ $H=0.25, r=0.0005$ & $1.13 \cdot 10^{-3}$ & $1.51 \cdot 10^{-3}$ & $1.13 \cdot 1
 \begin{subfigure}{0.45\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.15_L0.5.svg}
 \caption{}
-\label{eq:kham_rad_hypo_fault_q_l_constH015_L05}
+\label{fig:kham_rad_hypo_fault_q_l_constH015_L05}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.15_L1.svg}
 \caption{}
-\label{eq:kham_rad_hypo_fault_q_l_constH015_L1}
+\label{fig:kham_rad_hypo_fault_q_l_constH015_L1}
 \end{subfigure}
 
 % --- Второй ряд ---
 \begin{subfigure}{0.45\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.15_L2.svg}
 \caption{}
-\label{eq:kham_rad_hypo_fault_q_l_constH015_L2}
+\label{fig:kham_rad_hypo_fault_q_l_constH015_L2}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.15_L3.svg}
 \caption{}
-\label{eq:kham_rad_hypo_fault_q_l_constH015_L3}
+\label{fig:kham_rad_hypo_fault_q_l_constH015_L3}
 \end{subfigure}
 
 % --- Third row ---
 \begin{subfigure}{0.45\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.15_L5.svg}
 \caption{}
-\label{eq:kham_rad_hypo_fault_q_l_constH015_L5}
+\label{fig:kham_rad_hypo_fault_q_l_constH015_L5}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.15_L10.svg}
 \caption{}
-\label{eq:kham_rad_hypo_fault_q_l_constH015_L10}
+\label{fig:kham_rad_hypo_fault_q_l_constH015_L10}
 \end{subfigure}
 
-\caption{$E_q$ вдоль ствола скважины при $H=0.15$ (сплошная линия~--~численное решение, пунктирная~--~аналитическое)}
+\caption{
+$E_q$ вдоль ствола скважины при $H=0.15$
+(расчеты сделаны по модели~\cite{lit:kham_mazo_uzku_2015}); \\
+(сплошная линия~--~численное решение, пунктирная~--~аналитическое)}
 \label{fig:kham_rad_hypo_fault_q_l_constH015}
 \end{figure}
 
-{\color{red} Нужно понять, сделать выводы почему же численный дебит к середине скважины так сильно отличается от аналитического? хотя для задача с непроницаемыми границами по бокам ошибка всего 4\%. Пока вижу 2 варианта: 1) так влияет торцы. 2) я не сравнивал аналитический приток к стволу скважины с численной моделью~\cite{lit:kham_mazo_uzku_2015} Только с MRST.}
+Видно, что для длинных скважин удельный приток к середине падает ниже аналитического (рис.~\ref{fig:kham_rad_hypo_fault_q_l_H025_L5}). Чтобы убедиться, что проблема не в численном решение, произведем те же вычисления в MRST.
+
+\begin{figure}[h!]
+\centering
+% --- Первый ряд ---
+\begin{subfigure}{0.3\textwidth}
+\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.05_L0.5_mrst.svg}
+\caption{}
+\label{fig:kham_rad_hypo_fault_q_l_H005_L05_mrst}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.3\textwidth}
+\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.05_L1_mrst.svg}
+\caption{}
+\label{fig:kham_rad_hypo_fault_q_l_H005_L1_mrst}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.3\textwidth}
+\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.05_L5_mrst.svg}
+\caption{}
+\label{fig:kham_rad_hypo_fault_q_l_H005_L5_mrst}
+\end{subfigure}
+
+% --- Второй ряд ---
+\begin{subfigure}{0.3\textwidth}
+\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.15_L0.5_mrst.svg}
+\caption{}
+\label{fig:kham_rad_hypo_fault_q_l_H015_L05_mrst}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.3\textwidth}
+\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.15_L1_mrst.svg}
+\caption{}
+\label{fig:kham_rad_hypo_fault_q_l_H015_L1_mrst}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.3\textwidth}
+\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.15_L5_mrst.svg}
+\caption{}
+\label{fig:kham_rad_hypo_fault_q_l_H015_L5_mrst}
+\end{subfigure}
+
+% --- Third row ---
+\begin{subfigure}{0.3\textwidth}
+\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.25_L0.5_mrst.svg}
+\caption{}
+\label{fig:kham_rad_hypo_fault_q_l_H025_L05_mrst}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.3\textwidth}
+\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.25_L1_mrst.svg}
+\caption{}
+\label{fig:kham_rad_hypo_fault_q_l_H025_L1_mrst}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.3\textwidth}
+\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.25_L5_mrst.svg}
+\caption{}
+\label{fig:kham_rad_hypo_fault_q_l_H025_L5_mrst}
+\end{subfigure}
+
+\caption{
+$E_q$ вдоль ствола скважины (расчеты сделаны в MRST);
+\\ (сплошная линия~--~численное решение, пунктирная~--~аналитическое)
+}
+\label{fig:kham_rad_hypo_fault_q_l_mrst}
+\end{figure}
+
+Как видим из рис.~\ref{fig:kham_rad_hypo_fault_q_l_mrst} удельный приток $q$ тоже дает значения ниже, чем по аналитической модели на удалении от торцов (по середине ствола скважины). Это говорит о том, что 1) наличие торцевого притока влияет на радиальный приток даже на отдалении от торцов (либо эта та самая разница в 3-4 \% (рис.~\ref{fig:kham_hw_inner_eq_map})); 2) численные решения в MRST и по модели~\cite{lit:kham_mazo_uzku_2015} хорошо согласуются (рис.~\ref{fig:kham_well_along_ql_mgrp_mrst_H015_L5_rw0001})
+
+Оценим насколько формула $Q = Q_w^P * L$ занижает дебит (сравним с численным решением).
+
+\begin{figure}[h!]
+\centering
+% --- Первый ряд ---
+\begin{subfigure}{0.48\textwidth}
+\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_Rq_map_L05_mrst.svg}
+\caption{}
+\label{fig:kham_Rq_map_L0.5_mrst}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_Rq_map_L1_mrst.svg}
+\caption{}
+\label{fig:kham_Rq_map_L1_mrst}
+\end{subfigure}
+
+% --- Второй ряд ---
+\begin{subfigure}{0.48\textwidth}
+\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_Rq_map_L5_mrst.svg}
+\caption{}
+\label{fig:kham_Rq_map_L5_mrst}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_Rq_map_L10_mrst.svg}
+\caption{}
+\label{fig:kham_Rq_map_L10_mrst}
+\end{subfigure}
+
+\caption{
+$E_q$ вдоль ствола скважины (расчеты сделаны в MRST);
+\\ (сплошная линия~--~численное решение, пунктирная~--~аналитическое)
+}
+\label{fig:kham_Rq_map_mrst}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.7\linewidth]{images/hw/kham_well_along_ql_mgrp_mrst_H015_L5_rw0001.svg}
+\label{fig:kham_well_along_ql_H015_L5_rw0001_mgrp_mrst}
+\caption{Удельный относительный приток к стволу скважины \\
+сплошная линия~--~модель~\cite{lit:kham_mazo_uzku_2015}, маркеры~--~MRST)}
+\end{figure}
 
 \subsubsection{Полный приток к ГС}
 Полный приток к горизонтальной скважине длины $L$ будет определяться по формуле
@@ -1080,7 +1280,7 @@ B_a^E = \dfrac{I_0 \left( \lambda H \right) + \left(p^f_{\Gamma} - 1 \right) I_0
 \displaystyle
 \begin{gathered}
 p_f\left(r\right) = 1 + \dfrac{\left(p^f_{\Gamma}-1\right) E_a \left(r\right) + J_a^E\left(r\right)}{D_a}, \;\; r_w \leq r < H, \\
-J_a^E(r) = I_0 \left(\lambda H) K_0 \left(\lambda r\right) - K_0 \left(\lambda H\right) I_0 \left(\lambda r\right).
+J_a^E(r) = I_0 \left(\lambda H) K_0 \left(\lambda r\right) - K_0 \left(\lambda H\right) I_0 \left(\lambda r).
 \end{gathered}
 \label{eq:kham_fract_outer_final_sol_pf_radial}
 \end{equation}
