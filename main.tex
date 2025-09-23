@@ -113,7 +113,7 @@ $p_r$ на внешнем контуре; капиллярные и гравит
   \label{eq:kham_dimless}
 \end{equation}
 сводится  к уравнениям  давления $p$ в коллекторе и $p_f$ в трещинах
-гидроразрыва~\cite{lit:kham_mazo_uzku_2015}
+гидроразрыва~\cite{ref:kham_mazo_uzku_2015}
 \begin{equation}
   \displaystyle
   - \text{div} \vec{u} = 0, \quad u=-\sigma \text{grad} p;
@@ -140,7 +140,7 @@ $p_r$ на внешнем контуре; капиллярные и гравит
 решена численно, однако, такой подход требует больших вычислительных затрат.
 Ниже предлагается упрощенная методика, основанная на учете различных видов симметрии фильтрационного течения в окрестности ГС с МГРП. При этом прямое численное моделирование будет использовано для уточнения приближенного решения.
 Постановка задачи и формулы для расчета притока жидкости к горизонтальной
-скважине без трещин МГРП получаются аналогично работе~\cite{lit:kham_mazo_uzku_2015},
+скважине без трещин МГРП получаются аналогично работе~\cite{ref:kham_mazo_uzku_2015},
 с разницей лишь в масштабирующих коэффициентах. Для более детальных выводов
 можно обратиться к первоисточнику, в данный работе приведем только конечные
 формулы и проведем более детальный анализ применимости этих формул.
@@ -201,7 +201,7 @@ $\Gamma=\left\{\left(x,y\right): \sqrt{x^2 + z^2} = H \right\}$
   \displaystyle
   p_{\Gamma} = \dfrac{2 H \ln{\left(H/r_w\right)}}{2 H \ln{\left(H/r_w\right)
   + \pi \theta \left(1 - H\right)}}
-  \label{eq:kham_hw_inner_pg}
+  \label{eq:kham_pgr_inner_section}
 \end{equation}
 Для завершения описания модели необходимо указать, как формируется итоговое
 распределение давления во всей области. После определения давления на
@@ -370,7 +370,7 @@ Q_w^E = \dfrac{2\pi p_{\Gamma} H r_w}{\left(H - r_w\right)}
 Поправочный коэффициент $\theta$ будем определять из условия равенства численного и аналитического дебитов $Q_w^E = Q_{\text{num}}$. Тогда $\theta$ по формулам (\ref{eq:kham_hw_outer_Q}) и (\ref{eq:kham_hw_outer_pg}) будет
 \begin{equation}
 \displaystyle
-\theta = \dfrac{Q_{\text{num}} \left(H - r_w \right) - 2 \pi H r_w}{r_w Q_{\text{num}} \ln{H}}
+\theta = \dfrac{Q_{\text{num}} \left(H - r_w \right) - 2 \pi H r_w}{r_w Q_{\text{num}} \ln{H} \right}
 \label{eq:kham_theta_spheric}
 \end{equation}
 
@@ -507,8 +507,8 @@ $H=0.25, r=0.0005$ & $1.82$ & $0.39$ & $1.8$ \\
 \end{subfigure}
 \caption{
 Зависимости от $H$, $r_w$ (по модели~\cite{lit:kham_mazo_uzku_2015}, при $\theta = 1$):
-а)~$E_q$;
-б)~$E_{p_{\Gamma}}$
+а)~--~$E_q$;
+б)~--~$E_{p_{\Gamma}}$
 }
 \label{fig:kham_hw_outer_theta_epg_maps_mgrp}
 \end{figure}
@@ -575,8 +575,8 @@ $H=0.25, r=0.0005$ & $1.13 \cdot 10^{-3}$ & $1.51 \cdot 10^{-3}$ & $1.13 \cdot 1
 
 Оценим долю притока с торцов скважины.
 
-На рис.~\ref{eq:kham_qsph_qan_an_L5} приведены поля $Q_w^E / Q_w^P$, вычисленные по аналитическим формулам (\ref{eq:eq:kham_qw_inner}) и (\ref{eq:eq:kham_qw_outer}) (на самом деле тут $2 Q_w^E$, так как торцов два).
-Ясно, что для толстой скважины и/или тонкого пласта эффект от сферического притока будет более существенным, что подтверждается расчетами (рис.~\ref{eq:kham_qsph_qan_an_L5})
+На рис.~\ref{eq:kham_qsph_qan_an_L5} приведены поля $Q_w^E / Q_w_P$, вычисленные по аналитическим формулам (\ref{eq:eq:kham_qw_inner}) и (\ref{eq:eq:kham_qw_outer}) (на самом деле тут $2 Q_w^E$, так как торцов два).
+Ясно, что для толстой скважины и\или тонкого пласта эффект от сферического притока будет более существенным, что подтверждается расчетами (рис.~\ref{eq:kham_qsph_qan_an_L5})
 
 \begin{figure}[h!]
 \centering
@@ -661,57 +661,57 @@ $H=0.25, r=0.0005$ & $1.13 \cdot 10^{-3}$ & $1.51 \cdot 10^{-3}$ & $1.13 \cdot 1
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Ep_H0.05_L0.5.svg}
 \caption{}
-\label{fig:kham_rad_hypo_fault_p_over_l_H005_L05}
+\label{eq:kham_rad_hypo_fault_p_over_l_H005_L05}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Ep_H0.05_L1.svg}
 \caption{}
-\label{fig:kham_rad_hypo_fault_p_over_l_H005_L1}
+\label{eq:kham_rad_hypo_fault_p_over_l_H005_L1}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Ep_H0.05_L5.svg}
 \caption{}
-\label{fig:kham_rad_hypo_fault_p_over_l_H005_L5}
+\label{eq:kham_rad_hypo_fault_p_over_l_H005_L5}
 \end{subfigure}
 
 % --- Второй ряд ---
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Ep_H0.15_L0.5.svg}
 \caption{}
-\label{fig:kham_rad_hypo_fault_p_over_l_H015_L05}
+\label{eq:kham_rad_hypo_fault_p_over_l_H015_L05}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Ep_H0.15_L1.svg}
 \caption{}
-\label{fig:kham_rad_hypo_fault_p_over_l_H015_L1}
+\label{eq:kham_rad_hypo_fault_p_over_l_H015_L1}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Ep_H0.15_L5.svg}
 \caption{}
-\label{fig:kham_rad_hypo_fault_p_over_l_H015_L5}
+\label{eq:kham_rad_hypo_fault_p_over_l_H015_L5}
 \end{subfigure}
 
 % --- Third row ---
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Ep_H0.25_L0.5.svg}
 \caption{}
-\label{fig:kham_rad_hypo_fault_p_over_l_H025_L05}
+\label{eq:kham_rad_hypo_fault_p_over_l_H025_L05}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Ep_H0.25_L1.svg}
 \caption{}
-\label{fig:kham_rad_hypo_fault_p_over_l_H025_L1}
+\label{eq:kham_rad_hypo_fault_p_over_l_H025_L1}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Ep_H0.25_L5.svg}
 \caption{}
-\label{fig:kham_rad_hypo_fault_p_over_l_H025_L5}
+\label{eq:kham_rad_hypo_fault_p_over_l_H025_L5}
 \end{subfigure}
 
 \caption{$E_p$ вдоль ствола скважины ()}
@@ -723,23 +723,23 @@ $H=0.25, r=0.0005$ & $1.13 \cdot 10^{-3}$ & $1.51 \cdot 10^{-3}$ & $1.13 \cdot 1
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_py_L05_rw0001_H015_mgrp.svg}
 \caption{}
-\label{fig:kham_py_L05_rw0001_H015_mgrp}
+\label{eq:kham_py_L05_rw0001_H015_mgrp}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_py_L2_rw0001_H015_mgrp.svg}
 \caption{}
-\label{fig:kham_py_L2_rw0001_H015_mgrp}
+\label{eq:kham_py_L2_rw0001_H015_mgrp}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.3\textwidth}
 \includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_py_L10_rw0001_H015_mgrp.svg}
 \caption{}
-\label{fig:kham_py_L10_rw0001_H015_mgrp}
+\label{eq:kham_py_L10_rw0001_H015_mgrp}
 \end{subfigure}
 
 \caption{Давление в ортогональных к скважинии линиях для различных относительных координат вдоль ствола ($H=0.15, \; r_w = 0.0001$) : а) $L=0.5$}
-\label{fig:kham_rad_hypo_fault_p_over_l_H015_rw00001_L05}
+\label{fig:kham_rad_hypo_fault_p_over_l}
 \end{figure}
 
 Как видно из рис.~\ref{fig:kham_rad_hypo_fault_p_over_l} вблизи торцов скважины давление существенно отличается от радиального и еще более сильно от сферического.
@@ -971,7 +971,7 @@ $E_q$ вдоль ствола скважины (расчеты сделаны в
 
 \begin{figure}[!ht]
 \centering
-\includesvg[width=0.7\linewidth]{images/hw/kham_well_along_ql_mgrp_mrst_H015_L5_rw0001.svg}
+\includegraphics[width=0.7\linewidth]{images/hw/kham_well_along_ql_mgrp_mrst_H015_L5_rw0001.svg}
 \label{fig:kham_well_along_ql_H015_L5_rw0001_mgrp_mrst}
 \caption{Удельный относительный приток к стволу скважины \\
 сплошная линия~--~модель~\cite{lit:kham_mazo_uzku_2015}, маркеры~--~MRST)}
@@ -981,13 +981,10 @@ $E_q$ вдоль ствола скважины (расчеты сделаны в
 Полный приток к горизонтальной скважине длины $L$ будет определяться по формуле
 \begin{equation}
 \displaystyle
-Q = Q_w^P,
+Q = Q_w^P + 2 Q_w^E,
 \label{eq:kham_hw_total}
 \end{equation}
-где $Q_w^P$~--~приток к основному стволу скважины~(\ref{eq:kham_qw_inner}).
-При этом в формуле (\ref{eq:kham_hw_inner_pg}) берем $\theta=1$. Ограничения для пользования этой формулой $L \geq 5$. В таком случае отклонение от численного решения будет не более 10 \% (рис.~\ref{fig:kham_Rq_map_L5_mrst}).
-
-\subsubsection{Сравнение с другими моделями}
+где $Q_w^P$~--~приток к основному стволу скважины~(\ref{eq:kham_qw_inner}), а $Q_w^E$~--~приток к торцам скважины~(\ref{eq:kham_hw_outer_Q}) при $\theta=1$.
 
 \subsection{Приток к скважине с МГРП}
 Перейдем к рассмотрению общего случая горизонтальной скважины с многостадийным гидравлическим разрывом пласта.
@@ -1026,7 +1023,7 @@ p = p_f \;\; \text{при} \;\; y = 0, \;\; x \leq h.
 \label{eq:kham_simple_main_pf_boundaries}
 \end{equation}
 
-Нетрудно видеть, что для трещин бесконечной проводимости $M \longrightarrow \infty$ и (\ref{eq:kham_simple_main_pf}) превращается в уравнение $p_f = 0$, которое при граничных условиях (\ref{eq:kham_simple_main_pf_boundaries}) имеет тривиальное решение $p_f \equiv 0$. Напротив, для тонких плохопроводящих трещин $M \longrightarrow 0$, и уравнение (\ref{eq:kham_simple_main_pf}), предварительно умноженное на $M$ вырождается в равенство~$\partial p/\partial y = 0$, которое с учетом $p_f = p$ (\ref{eq:kham_simple_main_pf_boundaries}) приводит к рассмотренной в работе \cite{lit:kham_mazo_uzku_2015} задаче о ГС без трещин ГРП.
+Нетрудно видеть, что для трещин бесконечной проводимости $M \longrightarrow \infty$ и (\ref{eq:kham_simple_main_pf}) превращается в уравнение $p_f = 0$, которое при граничных условиях (\ref{eq:kham_simple_main_pf_boundaries}) имеет тривиальное решение $p_f \equiv 0$. Напротив, для тонких плохопроводящих трещин $M \longrightarrow 0$, и уравнение (\ref{eq:kham_simple_main_pf}), предварительно умноженное на $M$ вырождается в равенство~$\partial p/\partial y = 0$, которое с учетом $p_f = p$ (\ref{eq:kham_simple_main_pf_boundaries}) приводит к рассмотренной в работе \cite{ref:kham_mazo_uzku_2015} задаче о ГС без трещин ГРП.
 
 При конечных $M$ приближенное решение задачи можно получить, приняв два упрощения:
 \begin{enumerate}
@@ -1066,9 +1063,9 @@ p_f(r) = p_f^h\left(r\right) + p_f^p\left(r\right),
 \begin{equation}
 \displaystyle
 \dfrac{1}{r}\dfrac{d}{dr}\left(r\dfrac{d p_f^h}{dr}\right) - \lambda^2 p_f^h = 0,  \;\; \lambda^2 = \dfrac{1}{Md} > 0
-\label{eq:kham_fract_inner_partA_pf_mono}
+\label{eq:kham_final_pf_part2_mono}
 \end{equation}
-Решение такого уравнения~(\ref{eq:kham_fract_inner_partA_pf_mono}) имеет вид
+Решение такого уравнения~(\ref{eq:kham_final_pf_part2_mono}) имеет вид
 \begin{equation}
 \displaystyle
 p_f^h\left(r\right) = A_a I_0\left(\lambda r\right) + B_a K_0\left(\lambda r\right),
@@ -1157,9 +1154,9 @@ p_f = p^f_{\Gamma}  \;\; \text{при} \;\; x = H; \;\;\; \dfrac{\partial p_f}{\
 \begin{equation}
 \displaystyle
 \dfrac{d^2 p_f^h}{dx^2}-\lambda^2 p_f^h = 0, \;\; \text{где} \;\; \lambda^2 = \dfrac{1}{Md} > 0
-\label{eq:kham_fract_inner_partB_pf_mono}
+\label{eq:kham_final_pf_part2_mono}
 \end{equation}
-Общее решение уравнения~(\ref{eq:kham_fract_inner_partB_pf_mono})
+Общее решение уравнения~(\ref{eq:kham_final_pf_part2_mono})
 \begin{equation}
 \displaystyle
 p_f^h = A_b e^{\lambda x} + B_b e^{-\lambda x},
@@ -1217,7 +1214,7 @@ H \leq x \leq h.
 \displaystyle
 Q_b = - \delta H \left. \frac{d p_f}{d x} \right|_{x=H}
 = - \delta H \left( A_b \lambda e^{\lambda H} - B_b \lambda e^{-\lambda H} + C_b \right),
-\label{eq:fract_inner_rate_x_H}
+\label{eq:rate_x_H}
 \end{equation}
 
 \mysub{Полный приток к участку скважины с трещиной ГРП }
@@ -1245,7 +1242,7 @@ Q = Q_w + Q_f = \dfrac{\pi d p^R_{\Gamma}}{2 \ln{\left(H / r_w\right)}} + F_a \l
 \theta =
 \frac{\big(Q_{\text{num}} - Q_w\big)\,K_b}
 {\,G_a K_b - F_a J_b - \big(Q_{\text{num}} - Q_w\big)F_a}.
-\label{eq:kham_fract_inner_theta}
+\label{eq:kham_theta_inner}
 \end{equation}
 
 \subsubsection{Внешний берег трещины}
@@ -1283,7 +1280,7 @@ B_a^E = \dfrac{I_0 \left( \lambda H \right) + \left(p^f_{\Gamma} - 1 \right) I_0
 \displaystyle
 \begin{gathered}
 p_f\left(r\right) = 1 + \dfrac{\left(p^f_{\Gamma}-1\right) E_a \left(r\right) + J_a^E\left(r\right)}{D_a}, \;\; r_w \leq r < H, \\
-J_a^E(r) = I_0 \left(\lambda H) K_0 \left(\lambda r\right) - K_0 \left(\lambda H\right) I_0 \left(\lambda r \right).
+J_a^E(r) = I_0 \left(\lambda H) K_0 \left(\lambda r\right) - K_0 \left(\lambda H\right) I_0 \left(\lambda r).
 \end{gathered}
 \label{eq:kham_fract_outer_final_sol_pf_radial}
 \end{equation}
@@ -1335,7 +1332,7 @@ H \leq x \leq h.
 \displaystyle
 Q_b = - \delta H \left. \frac{d p_f}{d x} \right|_{x=H} = - \delta H \, \lambda \, (p_\Gamma^f - 1) \, C_b^E, \;\;\;
 C_b^E = \frac{e^{\lambda H} - e^{2 \lambda h - \lambda H}}{e^{\lambda H} + e^{2 \lambda h - \lambda H}}.
-\label{eq:fract_outer_rate_x_H}
+\label{eq:rate_x_H}
 \end{equation}
 
 \mysub{Полный приток к участку скважины с трещиной ГРП }
