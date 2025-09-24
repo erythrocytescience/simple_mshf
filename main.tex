@@ -329,13 +329,16 @@ $p_{\Gamma}$ варьируется от 2 до 9~\% (рис.~\ref{fig:kham_hw_i
 Максимальное отклонение наблюдается при $H = 0.05$, $r = 0.002$,
 минимальное~--~при $H = 0.25$, $r = 0.0005$. Распределения давления при
 этих значениях приведены на рис.~\ref{fig:kham_hw_inner_press_disrt}.
-В таблице~\ref{tab:kham_hw_inner_p_error_metrics} представлены метрики (RMSE~---~среднеквадратичное отклонение,
-Mean~---~среднее значение, Std~---~стандартное отклонение) ошибки
+В таблице~\ref{tab:kham_hw_inner_p_error_metrics} представлены метрики~\cite{lit:kham_kolmogorov1974}
+(RMSE~---~среднеквадратичное отклонение, Mean~---~среднее значение, Std~---~стандартное отклонение) ошибки
 для этих двух наборов параметров.
 
 \begin{table}[H]
 	\centering
-	\caption{Метрики ошибки аналитического и численного давления $p$ при разных параметрах}
+	\caption{
+		Метрики ошибки аналитического и численного давления $p$ около основного ствола скважины
+		при разных параметрах
+	}
 	\label{tab:kham_hw_inner_p_error_metrics}
 	\begin{tabular}{|c|c|c|c|} % chktex 44
 		\hline % chktex 44
@@ -453,11 +456,21 @@ Mean~---~среднее значение, Std~---~стандартное отк�
 	\label{fig:kham_hw_outer_q_C_conv_MRST}
 \end{figure}
 
+На рис.~\ref{fig:kham_hw_outer_theta_map_mrst}--\ref{fig:kham_hw_outer_eq_epg_maps_mrst}
+показаны результаты численных расчётов в MRST. Видно, что поправочный коэффициент~$\theta$
+(рис.~\ref{fig:kham_hw_outer_theta_map_mrst}) принимает большие отрицательные значения,
+а значения невязки $E_q$~(рис.~\ref{fig:kham_hw_outer_eq_map_mrst}) указывают на существенную
+несогласованность аналитического и численного решений. При этом $E_{p_\Gamma}$~(рис.~\ref{fig:kham_hw_outer_epg_map_mrst})
+не превышает 10~\% и практически не зависит от $r_w$. Следует подчеркнуть, что причиной этих
+расхождений является не упрощённость аналитической модели, а ограничение MRST, который не учитывает
+сферическую симметрию и рассматривает течение только в декартовой постановке.
+
+
 \begin{figure}[H]
 	\centering
 	\includesvg[width=0.5\linewidth]{images/hw/hw_outer/kham_hw_outer_theta_mrst.svg}
 	\caption{Поправочный коэффициента $\theta$ для задачи на торце скважины (MRST)}
-	\label{fig:kham_hw_outer_theta_map_mrst} % chktex 24
+	\label{fig:kham_hw_outer_theta_map_mrst}
 \end{figure}
 
 \begin{figure}[H]
@@ -466,22 +479,33 @@ Mean~---~среднее значение, Std~---~стандартное отк�
 		\centering
 		\includesvg[width=\linewidth]{images/hw/hw_outer/kham_hw_outer_Eq_mrst.svg}
 		\caption{}
-		\label{fig:kham_hw_outer_eq_map_mrst} % chktex 24
+		\label{fig:kham_hw_outer_eq_map_mrst}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}{0.48\textwidth}
 		\centering
 		\includesvg[width=\linewidth]{images/hw/hw_outer/kham_hw_outer_Epg_mrst.svg}
 		\caption{}
-		\label{fig:kham_hw_outer_epg_map_mrst} % chktex 24
+		\label{fig:kham_hw_outer_epg_map_mrst}
 	\end{subfigure}
 	\caption{
 		Зависимости от $H$, $r_w$ (MRST, при $\theta = 1$):
-		а)~$E_q$; % chktex 9
-		б)~$E_{p_{\Gamma}}$ % chktex 10
-	} % chktex 10
-	\label{fig:kham_hw_outer_eq_epg_maps_mrst} % chktex 24
+		а)~$E_q$;
+		б)~$E_{p_{\Gamma}}$
+	}
+	\label{fig:kham_hw_outer_eq_epg_maps_mrst}
 \end{figure}
+
+На рис.~\ref{fig:kham_hw_outer_press_disrt_mrst} приведено сравнение аналитического
+и численного распределений давления в пласте, рассчитанных в MRST. Видно, что решения
+хорошо совпадают во всём диапазоне $x$, за исключением окрестности скважины, где MRST
+не воспроизводит сферическую симметрию течения. Как показывают метрики невязки
+(таблица~\ref{tab:kham_hw_outer_p_error_metrics_mrst})
+при нормировочном масштабе давления порядка единицы метрики ошибок достигают
+$\text{RMSE} \sim 2$, $\text{Mean} \sim 1$, что свидетельствует о значительном
+несогласии между аналитической моделью и численным решением. Основной причиной
+является ограничение MRST, который не учитывает сферическую симметрию течения
+у торца скважины и тем самым искажает распределение давления.
 
 \begin{figure}[H]
 	\centering
@@ -503,13 +527,18 @@ Mean~---~среднее значение, Std~---~стандартное отк�
 		(сплошная линия~--~аналитическое решение, маркеры~--~численное): \\
 		а)~$H = 0.05$, $r = 0.002$;
 		б)~$H = 0.25$, $r = 0.0005$
-	} % chktex 10
+	}
 	\label{fig:kham_hw_outer_press_disrt_mrst}
 \end{figure}
 
+
+
 \begin{table}[H]
 	\centering
-	\caption{Сравнение аналитического и численного давления $p$ при разных параметрах (MRST)}
+	\caption{
+		Метрики ошибки аналитического и численного давления $p$ у торца скважины
+		при разных параметрах (MRST)
+	}
 	\label{tab:kham_hw_outer_p_error_metrics_mrst}
 	\begin{tabular}{|c|c|c|c|} % chktex 44
 		\hline % chktex 44
@@ -534,14 +563,15 @@ Mean~---~среднее значение, Std~---~стандартное отк�
 	\label{fig:kham_hw_outer_theta_map_mgrp}
 \end{figure}
 
-На рис.~\ref{fig:kham_hw_outer_theta_map_mgrp} видим, что $\theta$ принимает значения от 1.1 до 2.4,
-но относительная ошибка~(\ref{eq:kham_common_residual}) по $Q$ не
-превышает 1.1\% (рис.~\ref{fig:kham_hw_outer_eq_map_mgrp}).
-Это связано с тем, что $\theta$ чрезвычайно чувствительная
-к парамтерам $H, \; r_w, Q_{\text{num}}$. Поэтому даже небольшие изменения
-дебита дают большие изменения $\theta$. Это означает, что даже при $\theta$ больше
-единицы в несколько раз, в формуле~(\ref{eq:kham_hw_outer_pg}) можно положить $\theta=1$ и
-при этом ошибка в дебите не будет превышать одного процента~(рис.~\ref{fig:kham_hw_outer_eq_map_mgrp}).
+На рис.~\ref{fig:kham_hw_outer_theta_map_mgrp} видно, что $\theta$ изменяется в диапазоне от 1.1 до 2.4,
+однако относительная ошибка~(\ref{eq:kham_common_residual}) по дебиту $Q$ не превышает 1.1~\%
+(рис.~\ref{fig:kham_hw_outer_eq_map_mgrp}), а по давлению $p_{\Gamma}$~---~0.25~\%
+(рис.~\ref{fig:kham_hw_outer_epg_map_mgrp}). Это связано с высокой чувствительностью параметра~$\theta$
+к изменениям $H$, $r_w$ и $Q_{\text{num}}$. Даже при значениях $\theta$, существенно превышающих единицу,
+погрешность расчёта $Q$ остаётся низкой. Наибольшие отклонения наблюдаются при малых $H$ и больших $r_w$,
+однако и в этом случае использование приближения $\theta=1$ в формуле~(\ref{eq:kham_hw_outer_pg})
+обеспечивает приемлемую точность для практических приложений.
+
 
 \begin{figure}[H]
 	\centering
@@ -549,21 +579,21 @@ Mean~---~среднее значение, Std~---~стандартное отк�
 		\centering
 		\includesvg[width=\linewidth]{images/hw/hw_outer/kham_hw_outer_Eq_mgrp.svg}
 		\caption{}
-		\label{fig:kham_hw_outer_eq_map_mgrp} % chktex 24
+		\label{fig:kham_hw_outer_eq_map_mgrp}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}{0.48\textwidth}
 		\centering
 		\includesvg[width=\linewidth]{images/hw/hw_outer/kham_hw_outer_Epg_mgrp.svg}
 		\caption{}
-		\label{fig:kham_hw_outer_epg_map_mgrp} % chktex 24
+		\label{fig:kham_hw_outer_epg_map_mgrp}
 	\end{subfigure}
 	\caption{
 		Зависимости от $H$, $r_w$ (по модели~\cite{lit:kham_mazo_uzku_2015}, при $\theta = 1$):
-		а)~$E_q$; % chktex 9
-		б)~$E_{p_{\Gamma}}$ % chktex 10
-	} % chktex 10
-	\label{fig:kham_hw_outer_theta_epg_maps_mgrp} % chktex 24
+		а)~$E_q$;
+		б)~$E_{p_{\Gamma}}$
+	}
+	\label{fig:kham_hw_outer_theta_epg_maps_mgrp}
 \end{figure}
 
 Для оценки влияния поправочного коэффициента $\theta$ на точность расчёта удобно ввести величину
@@ -581,11 +611,6 @@ Mean~---~среднее значение, Std~---~стандартное отк�
 	|E_Q| \leq \varepsilon,
 \end{equation*}
 где $\varepsilon$~--- допустимая относительная ошибка в процентах.
-
-Как видно из рис.~\ref{fig:kham_hw_outer_eq_map_mgrp} при $\theta=1$ в формуле~(\ref{eq:kham_hw_outer_pg})
-относительная погрешность не превышает 1.1\% во всем диапазоне изменения $H$ и $r_w$. При этом погрешность
-тем больше, чем меньше $H$ и больше $r_w$.
-Это связано с тем, что \ldots {\color{red} добавить вывод}
 
 \begin{figure}[H]
 	\centering
@@ -607,13 +632,26 @@ Mean~---~среднее значение, Std~---~стандартное отк�
 		(сплошная линия~--~аналитическое решение, маркеры~--~численное): \\
 		а)~$H = 0.05$, $r = 0.002$;
 		б)~$H = 0.25$, $r = 0.0005$
-	}  % chktex 10
+	}
 	\label{fig:kham_hw_outer_press_disrt_mgrp}
 \end{figure}
 
+На рис.~\ref{fig:kham_hw_outer_press_disrt_mgrp} показано сравнение аналитического и численного
+распределений давления в пласте для двух наборов параметров. Видно, что во всём диапазоне
+значений $x$ решения практически совпадают, а различия проявляются лишь вблизи скважины.
+При этом величина невязки остаётся очень малой: как следует из таблицы~\ref{tab:kham_hw_inner_p_error_metrics},
+среднеквадратичное отклонение (RMSE) не превышает $3 \cdot 10^{-3}$, а средняя ошибка и стандартное отклонение
+имеют тот же порядок. Таким образом, аналитическая модель адекватно описывает распределение давления
+и обеспечивает хорошее согласие с численным решением даже при малых значениях $H$ и больших $r_w$,
+где расхождения наиболее заметны.
+
+
 \begin{table}[H]
 	\centering
-	\caption{Сравнение аналитического и численного давления $p$ при разных параметрах (по модели~\cite{lit:kham_mazo_uzku_2015})}
+	\caption{
+		Метрики ошибки аналитического и численного давления $p$ у торца скважины
+		при разных параметрах (по модели~\cite{lit:kham_mazo_uzku_2015})
+	}
 	\label{tab:kham_hw_outer_p_error_metrics_mgrp}
 	\begin{tabular}{|c|c|c|c|}  % chktex 44
 		\hline  % chktex 44
@@ -669,8 +707,8 @@ Mean~---~среднее значение, Std~---~стандартное отк�
 
 	\caption{
 		Доля сферического притока (аналитический расчет): \\
-		а) $L$=0.5, б) $L$=0.7, в) $L$=1.0, г) $L$=5.0  % chktex 9 chktex 10
-	}  % chktex 10
+		а) $L$=0.5, б) $L$=0.7, в) $L$=1.0, г) $L$=5.0
+	}
 	\label{fig:kham_hw_qpipe_qedge_an}
 \end{figure}
 
@@ -848,7 +886,7 @@ Mean~---~среднее значение, Std~---~стандартное отк�
 и становятся близкими к радиальной аппроксимации, тогда как сферическая модель остаётся
 неприменимой. Однако высокая относительная ошибка по давлению не всегда означает наличие
 сопоставимой ошибки в оценке дебита. Перейдём к рассмотрению распределения удельного притока вдоль
-ствола скважины (рис.~\ref{fig:kham_rad_hypo_fault_q_l}).
+ствола скважины (рис.~\ref{fig:kham_rad_hypo_fault_q_l_mgrp}).
 
 \begin{figure}[H]
 	\centering
@@ -856,7 +894,7 @@ Mean~---~среднее значение, Std~---~стандартное отк�
 	\begin{subfigure}{0.48\textwidth}
 		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.05_L0.5.svg}
 		\caption{}
-		\label{fig:kham_rad_hypo_fault_q_l_H005_L05}
+		\label{fig:kham_rad_hypo_fault_q_l_H005_L05_mgrp}
 	\end{subfigure}
 	% \hfill
 	% \begin{subfigure}{0.3\textwidth}
@@ -868,7 +906,7 @@ Mean~---~среднее значение, Std~---~стандартное отк�
 	\begin{subfigure}{0.48\textwidth}
 		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.05_L5.svg}
 		\caption{}
-		\label{fig:kham_rad_hypo_fault_q_l_H005_L5}
+		\label{fig:kham_rad_hypo_fault_q_l_H005_L5_mgrp}
 	\end{subfigure}
 
 	% % --- Второй ряд ---
@@ -894,7 +932,7 @@ Mean~---~среднее значение, Std~---~стандартное отк�
 	\begin{subfigure}{0.48\textwidth}
 		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.25_L0.5.svg}
 		\caption{}
-		\label{fig:kham_rad_hypo_fault_q_l_H025_L05}
+		\label{fig:kham_rad_hypo_fault_q_l_H025_L05_mgrp}
 	\end{subfigure}
 	% \hfill
 	% \begin{subfigure}{0.3\textwidth}
@@ -906,7 +944,7 @@ Mean~---~среднее значение, Std~---~стандартное отк�
 	\begin{subfigure}{0.48\textwidth}
 		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.25_L5.svg}
 		\caption{}
-		\label{fig:kham_rad_hypo_fault_q_l_H025_L5}
+		\label{fig:kham_rad_hypo_fault_q_l_H025_L5_mgrp}
 	\end{subfigure}
 
 	\caption{
@@ -915,10 +953,10 @@ Mean~---~среднее значение, Std~---~стандартное отк�
 		а)~$H=0.05$, $L=0.5$; б)~$H=0.05$, $L=5$;
 		в)~$H=0.25$, $L=0.5$; г)~$H=0.25$, $L=5$.
 	}
-	\label{fig:kham_rad_hypo_fault_q_l}
+	\label{fig:kham_rad_hypo_fault_q_l_mgrp}
 \end{figure}
 
-Из рис.~\ref{fig:kham_rad_hypo_fault_q_l} видно, что удельный приток распределяется
+Из рис.~\ref{fig:kham_rad_hypo_fault_q_l_mgrp} видно, что удельный приток распределяется
 вдоль ствола скважины неравномерно: наибольшие значения наблюдаются вблизи торцов,
 тогда как к середине скважины приток существенно уменьшается. Для коротких скважин~($L=0.5$)
 аналитическая модель заметно занижает значения по сравнению с численным решением, особенно
@@ -977,136 +1015,161 @@ Mean~---~среднее значение, Std~---~стандартное отк�
 % 	\label{fig:kham_rad_hypo_fault_q_l_constH015}
 % \end{figure}
 
-% Видно, что для длинных скважин удельный приток к середине падает ниже
-% аналитического~(рис.~\ref{fig:kham_rad_hypo_fault_q_l_H025_L5}).
-% Чтобы убедиться, что проблема не в численном решение, произведем те же вычисления в~MRST.
+Видно, что для длинных скважин удельный приток к середине падает ниже
+аналитического~(рис.~\ref{fig:kham_rad_hypo_fault_q_l_H025_L5_mgrp}).
+Чтобы убедиться, что проблема не в численном решение, произведем те же вычисления в~MRST.
 
-% \begin{figure}[H]
-% 	\centering
-% 	% --- Первый ряд ---
-% 	\begin{subfigure}{0.3\textwidth}
-% 		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.05_L0.5_mrst.svg}
-% 		\caption{}
-% 		\label{fig:kham_rad_hypo_fault_q_l_H005_L05_mrst}
-% 	\end{subfigure}
-% 	\hfill
-% 	\begin{subfigure}{0.3\textwidth}
-% 		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.05_L1_mrst.svg}
-% 		\caption{}
-% 		\label{fig:kham_rad_hypo_fault_q_l_H005_L1_mrst}
-% 	\end{subfigure}
-% 	\hfill
-% 	\begin{subfigure}{0.3\textwidth}
-% 		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.05_L5_mrst.svg}
-% 		\caption{}
-% 		\label{fig:kham_rad_hypo_fault_q_l_H005_L5_mrst}
-% 	\end{subfigure}
+\begin{figure}[H]
+	\centering
+	% --- Первый ряд ---
+	\begin{subfigure}{0.48\textwidth}
+		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.05_L0.5_mrst.svg}
+		\caption{}
+		\label{fig:kham_rad_hypo_fault_q_l_H005_L05_mrst}
+	\end{subfigure}
+	% \hfill
+	% \begin{subfigure}{0.3\textwidth}
+	% 	\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.05_L1_mrst.svg}
+	% 	\caption{}
+	% 	\label{fig:kham_rad_hypo_fault_q_l_H005_L1_mrst}
+	% \end{subfigure}
+	\hfill
+	\begin{subfigure}{0.48\textwidth}
+		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.05_L5_mrst.svg}
+		\caption{}
+		\label{fig:kham_rad_hypo_fault_q_l_H005_L5_mrst}
+	\end{subfigure}
 
-% 	% --- Второй ряд ---
-% 	\begin{subfigure}{0.3\textwidth}
-% 		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.15_L0.5_mrst.svg}
-% 		\caption{}
-% 		\label{fig:kham_rad_hypo_fault_q_l_H015_L05_mrst}
-% 	\end{subfigure}
-% 	\hfill
-% 	\begin{subfigure}{0.3\textwidth}
-% 		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.15_L1_mrst.svg}
-% 		\caption{}
-% 		\label{fig:kham_rad_hypo_fault_q_l_H015_L1_mrst}
-% 	\end{subfigure}
-% 	\hfill
-% 	\begin{subfigure}{0.3\textwidth}
-% 		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.15_L5_mrst.svg}
-% 		\caption{}
-% 		\label{fig:kham_rad_hypo_fault_q_l_H015_L5_mrst}
-% 	\end{subfigure}
+	% % --- Второй ряд ---
+	% \begin{subfigure}{0.3\textwidth}
+	% 	\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.15_L0.5_mrst.svg}
+	% 	\caption{}
+	% 	\label{fig:kham_rad_hypo_fault_q_l_H015_L05_mrst}
+	% \end{subfigure}
+	% \hfill
+	% \begin{subfigure}{0.3\textwidth}
+	% 	\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.15_L1_mrst.svg}
+	% 	\caption{}
+	% 	\label{fig:kham_rad_hypo_fault_q_l_H015_L1_mrst}
+	% \end{subfigure}
+	% \hfill
+	% \begin{subfigure}{0.3\textwidth}
+	% 	\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.15_L5_mrst.svg}
+	% 	\caption{}
+	% 	\label{fig:kham_rad_hypo_fault_q_l_H015_L5_mrst}
+	% \end{subfigure}
 
-% 	% --- Third row ---
-% 	\begin{subfigure}{0.3\textwidth}
-% 		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.25_L0.5_mrst.svg}
-% 		\caption{}
-% 		\label{fig:kham_rad_hypo_fault_q_l_H025_L05_mrst}
-% 	\end{subfigure}
-% 	\hfill
-% 	\begin{subfigure}{0.3\textwidth}
-% 		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.25_L1_mrst.svg}
-% 		\caption{}
-% 		\label{fig:kham_rad_hypo_fault_q_l_H025_L1_mrst}
-% 	\end{subfigure}
-% 	\hfill
-% 	\begin{subfigure}{0.3\textwidth}
-% 		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.25_L5_mrst.svg}
-% 		\caption{}
-% 		\label{fig:kham_rad_hypo_fault_q_l_H025_L5_mrst}
-% 	\end{subfigure}
+	% --- Third row ---
+	\begin{subfigure}{0.48\textwidth}
+		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.25_L0.5_mrst.svg}
+		\caption{}
+		\label{fig:kham_rad_hypo_fault_q_l_H025_L05_mrst}
+	\end{subfigure}
+	% \hfill
+	% \begin{subfigure}{0.3\textwidth}
+	% 	\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.25_L1_mrst.svg}
+	% 	\caption{}
+	% 	\label{fig:kham_rad_hypo_fault_q_l_H025_L1_mrst}
+	% \end{subfigure}
+	\hfill
+	\begin{subfigure}{0.48\textwidth}
+		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_well_along_Eq_H0.25_L5_mrst.svg}
+		\caption{}
+		\label{fig:kham_rad_hypo_fault_q_l_H025_L5_mrst}
+	\end{subfigure}
 
-% 	\caption{
-% 		$E_q$ вдоль ствола скважины (расчеты сделаны в MRST);
-% 		\\ (сплошная линия~--~численное решение, пунктирная~--~аналитическое)
-% 	}
-% 	\label{fig:kham_rad_hypo_fault_q_l_mrst}
-% \end{figure}
+	\caption{
+		Удельный приток $q$ вдоль ствола скважины (MRST); \\
+		(сплошная линия~---~численное решение, пунктирная~---~аналитическое): \\
+		а)~$H=0.05$, $L=0.5$; б)~$H=0.05$, $L=5$;
+		в)~$H=0.25$, $L=0.5$; г)~$H=0.25$, $L=5$.
+	}
+	\label{fig:kham_rad_hypo_fault_q_l_mrst}
+\end{figure}
 
-% Как видим из рис.~\ref{fig:kham_rad_hypo_fault_q_l_mrst} удельный приток~$q$
-% тоже дает значения ниже, чем по аналитической модели на удалении от
-% торцов (по середине ствола скважины). Это говорит о том, что 1)~наличие торцевого
-% притока влияет на радиальный приток даже на отдалении от торцов (либо эта та самая
-% разница в 3-4 \% (рис.~\ref{fig:kham_hw_inner_eq_map})); 2)~численные решения в MRST и  %chktex 8
-% по модели~\cite{lit:kham_mazo_uzku_2015} хорошо согласуются (рис.~\ref{fig:kham_well_along_ql_mgrp_mrst_H015_L5_rw0001})
+Как видно из рис.~\ref{fig:kham_rad_hypo_fault_q_l_mrst}, удельный приток~$q$
+оказывается ниже, чем по аналитической модели, даже в средней части ствола, вдали от торцов.
+Это может означать, что: 1) торцевой приток влияет на распределение радиального притока
+даже на удалении от торцов (в частности, это соответствует разнице в 3--4~\% на рис.~\ref{fig:kham_hw_inner_eq_map});
+2) численные решения в MRST и в модели~\cite{lit:kham_mazo_uzku_2015} хорошо согласуются
+(рис.~\ref{fig:kham_rad_hypo_fault_q_l_mgrp},~\ref{fig:kham_rad_hypo_fault_q_l_mrst},~\ref{fig:kham_well_along_ql_H015_L5_rw0001_mgrp_mrst}).
 
-% Оценим насколько формула $Q = Q_w^P * L$ занижает дебит (сравним с численным решением).
+\begin{figure}[H]
+	\centering
+	\includesvg[width=0.7\linewidth]{images/hw/kham_well_along_ql_mgrp_mrst_H015_L5_rw0001.svg}
+	\caption{Удельный относительный приток к стволу скважины \\
+		(сплошная линия~--~модель~\cite{lit:kham_mazo_uzku_2015}, маркеры~--~MRST)}
+	\label{fig:kham_well_along_ql_H015_L5_rw0001_mgrp_mrst}
+\end{figure}
 
-% \begin{figure}[H]
-% 	\centering
-% 	% --- Первый ряд ---
-% 	\begin{subfigure}{0.48\textwidth}
-% 		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_Rq_map_L05_mrst.svg}
-% 		\caption{}
-% 		\label{fig:kham_Rq_map_L0.5_mrst}
-% 	\end{subfigure}
-% 	\hfill
-% 	\begin{subfigure}{0.48\textwidth}
-% 		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_Rq_map_L1_mrst.svg}
-% 		\caption{}
-% 		\label{fig:kham_Rq_map_L1_mrst}
-% 	\end{subfigure}
+Оценим насколько аналитический дебит, вычисленный по формуле~(\ref{eq:kham_hw_inner_Q})
+занижает значение относительно численного решения (без учёта притока к торцам ствола).
 
-% 	% --- Второй ряд ---
-% 	\begin{subfigure}{0.48\textwidth}
-% 		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_Rq_map_L5_mrst.svg}
-% 		\caption{}
-% 		\label{fig:kham_Rq_map_L5_mrst}
-% 	\end{subfigure}
-% 	\hfill
-% 	\begin{subfigure}{0.48\textwidth}
-% 		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_Rq_map_L10_mrst.svg}
-% 		\caption{}
-% 		\label{fig:kham_Rq_map_L10_mrst}
-% 	\end{subfigure}
+\begin{figure}[H]
+	\centering
+	% --- Первый ряд ---
+	\begin{subfigure}{0.48\textwidth}
+		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_Rq_map_L05_mrst.svg}
+		\caption{}
+		\label{fig:kham_hw_pipe_edge_effect_L0.5_mrst}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.48\textwidth}
+		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_Rq_map_L1_mrst.svg}
+		\caption{}
+		\label{fig:kham_hw_pipe_edge_effect_L1_mrst}
+	\end{subfigure}
 
-% 	\caption{
-% 		$E_q$ вдоль ствола скважины (расчеты сделаны в MRST);
-% 		\\ (сплошная линия~--~численное решение, пунктирная~--~аналитическое)
-% 	}
-% 	\label{fig:kham_Rq_map_mrst}
-% \end{figure}
+	% --- Второй ряд ---
+	\begin{subfigure}{0.48\textwidth}
+		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_Rq_map_L5_mrst.svg}
+		\caption{}
+		\label{fig:kham_hw_pipe_edge_effect_L5_mrst}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.48\textwidth}
+		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_Rq_map_L10_mrst.svg}
+		\caption{}
+		\label{fig:kham_hw_pipe_edge_effect_L10_mrst}
+	\end{subfigure}
 
-% \begin{figure}[H]
-% 	\centering
-% 	\includesvg[width=0.7\linewidth]{images/hw/kham_well_along_ql_mgrp_mrst_H015_L5_rw0001.svg}
-% 	\label{fig:kham_well_along_ql_H015_L5_rw0001_mgrp_mrst}
-% 	\caption{Удельный относительный приток к стволу скважины \\
-% 		(сплошная линия~--~модель~\cite{lit:kham_mazo_uzku_2015}, маркеры~--~MRST)}
-% \end{figure}
+	\caption{
+		Отношение численного дебита основного ствола скважины~$Q_{\text{num}}$ к аналитическому~$Q_{\text{an}}$: \\
+		а)~$L=0.5$, б)~$L=1$, в)~$L=5$, г)~$L=10$.
+	}
+	\label{fig:kham_hw_pipe_edge_effects_mrst}
+\end{figure}
 
-% \subsubsection{Полный приток к ГС}
-% Полный приток к горизонтальной скважине длины $L$ будет определяться по формуле
-% \begin{equation}
-% 	\displaystyle
-% 	Q = Q_w^P + 2 Q_w^E,
-% 	\label{eq:kham_hw_total}
-% \end{equation}
-% где $Q_w^P$~--~приток к основному стволу скважины~(\ref{eq:kham_qw_inner}), а $Q_w^E$~--~приток к торцам скважины~(\ref{eq:kham_hw_outer_Q}) при $\theta=1$.
+На рис.~\ref{fig:kham_hw_pipe_edge_effects_mrst} представлено отношение численного дебита
+основного ствола $Q_{\text{num}}$ к аналитическому $Q_{\text{an}}$, вычисленному по формуле~(\ref{eq:kham_hw_inner_Q}).
+Аналитическая модель систематически занижает дебит: для коротких скважин ($L \leq 1$) численные результаты
+превышают аналитические в 1.5--2.2 раза. С ростом длины скважины расхождение уменьшается, и
+отношение $Q_{\text{num}}/Q_{\text{an}}$ приближается к единице.
+Зависимость от параметров $H$ и $r_w$ также прослеживается, однако она существенно слабее,
+чем влияние длины скважины. Таким образом, формула~(\ref{eq:kham_hw_inner_Q})
+может использоваться для протяжённых скважин, тогда как для коротких требуется введение скин-фактора.
+
+\subsubsection{Полный приток к ГС}
+
+Полный приток к горизонтальной скважине длины $L$ определяется выражением
+\begin{equation}
+	\displaystyle
+	Q = Q_w^P = \dfrac{2 \pi p_{\Gamma}}{\ln \left( H / r_w \right)},
+	\label{eq:kham_hw_total}
+\end{equation}
+где~$p_{\Gamma}$ вычисляется по формуле~(\ref{eq:kham_hw_inner_pg}) при $\theta=1$.
+Сравнение аналитического результата с численным решением (рис.~\ref{fig:kham_hw_pipe_edge_effects_mrst})
+показывает, что при $L \geq 5$ расхождения не превышают 10~\%, и формула~(\ref{eq:kham_hw_total})
+может использоваться без дополнительных поправок.
+
+Однако для более коротких скважин ($L < 5$) торцевые эффекты оказывают существенное влияние,
+и аналитическая модель систематически занижает дебит. Для корректного учёта этого эффекта
+в формулу~(\ref{eq:kham_hw_total}) необходимо ввести так называемый \textit{скин-фактор}.
+
+
+\subsubsection{Сравнение с другими моделями}
+
+
 
 % \subsection{Приток к скважине с МГРП}
 % Перейдем к рассмотрению общего случая горизонтальной скважины с многостадийным гидравлическим разрывом пласта.
