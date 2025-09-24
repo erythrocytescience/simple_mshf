@@ -53,6 +53,6 @@
 *.alg
 
 # Временные директории
-_build/
+build/
 latex.out/
 svg-inkscape/
