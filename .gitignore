@@ -1,0 +1,58 @@
+# Скомпилированные файлы
+*.pdf
+*.dvi
+*.xdv
+*.ps
+
+# Временные файлы
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+
+# BibTeX
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# Счётчики и временные индексы
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.lol
+*.nav
+*.snm
+
+# Beamer
+*.vrb
+
+# Списки изменений
+*.upa
+*.upb
+
+# Arara
+*.w18
+*.wlog
+*.wrt
+
+# glossaries
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.ist
+*.acn
+*.acr
+*.alg
+
+# Временные директории
+build/
+latex.out/
+svg-inkscape/
