@@ -126,7 +126,7 @@ $p_r$ на внешнем контуре; капиллярные и гравит
 \begin{equation}
 	\displaystyle
 	\begin{gathered}
-		\triangle p_f + \dfrac{\sigma}{2M}\left.\dfrac{\partial p}{\partial y} \right|_{y_f - \delta}^{y_f + \delta} = 0, \\[8pt]
+		\Delta_{xz} p_f + \dfrac{\sigma}{2M}\left.\dfrac{\partial p}{\partial y} \right|_{y_f - \delta}^{y_f + \delta} = 0, \\[8pt]
 		\quad M = \dfrac{C_f I_h}{2}, \quad C_f = \dfrac{2 k_f \delta}{k h}, \quad I_h=\dfrac{h}{R}
 	\end{gathered}
 	\label{eq:kham_main_p_fract}
@@ -1306,229 +1306,231 @@ $Q_{\text{num}}/Q_{\text{an}}^{\text{skin}}$ остаётся близким к 
 $L$, в других же моделях заложено, что $L < R$. Поэтому логично взять огромную область и на нее все нормировать? 
 Поэтому у меня дебит линейно растет с ростом $L$, потому что скважина не упирается в область дренирования. ПОДУМАТЬ!!!}
 
-% \subsection{Приток к скважине с МГРП}
-% Перейдем к рассмотрению общего случая горизонтальной скважины с многостадийным гидравлическим разрывом пласта.
-% Выберем один фрагмент~$D$ четверти области, ограниченной двумя вертикальными плоскостями, одна из которых проходит посредине трещины ГРП, а другая отстоит от нее на расстоянии~$d$ и проходит посредине между трещинами (см.~рис.~\ref{fig:kham_inner_sector_scheme}).
+\subsection{Приток к скважине с МГРП}
+Перейдем к рассмотрению общего случая горизонтальной скважины с многостадийным гидравлическим разрывом пласта.
+Будем различать два типа берегов трещины: внутренний~---~обращённый к соседним трещинам; 
+и внешний~---~обращённый к границе области дренирования. 
 
-% \begin{figure}[H]
-% 	\centering
-% 	\includegraphics[width=0.7\linewidth]{images/schemes/kham_fract_inner_scheme.png}
-% 	\caption{\label{fig:kham_inner_sector_scheme}Область решения задачи притока жидкости к горизонтальной скважине с трансверсальной трещиной ГРП}
-% \end{figure}
+Трехмерная задача для давления~$p$ в коллекторе~$D$ для однородного пласта имеет вид~(\ref{eq:kham_main_p_res}).
+Плоская задача для давления~$p_f$ в плоскости трещины имеет вид~(\ref{eq:kham_main_p_fract}), 
+ приближенное решение которого при конечных $M$ можно получить, приняв два упрощения:
+\begin{enumerate}
+	\item деление области внутри трещины на две подобласти: (I) $r_w \leq x < H$, (II) $H \leq x \leq h$;
+	\item  аппроксимация второго члена конечной разностью
+	      \begin{equation}
+		      \displaystyle
+		      \dfrac{\partial p}{\partial y} \approx \dfrac{1}{d}\left(p_d - p_f\right),
+		      \label{eq:kham_dpdy_approx}
+	      \end{equation}
+	      где~$p_d(x)$~--~давление в пласте на расстоянии~$d$ от трещины.
+	      Если берег трещины \emph{внутренний}, то $p_d$ вычисляется по формулам
+	      распределения давления в  пласте~(\ref{eq:kham_hw_inner_total_pressure}). Если берег \emph{внешний} и трещина 
+		  расположена на расстоянии, превышающем $d$ от торца скважины, ее рассматривают как внутреннюю; 
+	      если же трещина находится непосредственно у торца, то в~(\ref{eq:kham_dpdy_approx})
+	      пологают $d = 1$, $p_d = 1$ (давление на контуре питания).
+\end{enumerate}
 
-% Будем различать два типа берегов трещин: внутренний~--~такой, справа или слева от которого есть соседние трещины; и внешний~--~такой, где справа или слева проходит граница области дренирования.
+\subsubsection{Внутренний берег трещины}
+Выберем один фрагмент~$D$ четверти области, ограниченной двумя вертикальными плоскостями, одна из которых 
+проходит посредине трещины ГРП, а другая отстоит от нее на расстоянии~$d$ и проходит посредине между 
+трещинами (см.~рис.~\ref{fig:kham_fract_inner_scheme}).
 
-% Трехмерная задача для давления~$p$ в коллекторе~$D$ для однородного пласта с учетом плоской симметрии имеет вид~(\ref{eq:kham_main_p_res}) с граничными условиями
-% \begin{equation}
-% 	\displaystyle
-% 	\begin{gathered}
-% 		\left. p\right|_{\gamma} = 0; \quad p=1 \quad \text{при} \quad x = 1; \\
-% 		\dfrac{\partial p}{\partial n} = 0 \quad \text{при} \quad x=0; \quad
-% 		y = d; \quad y = 0, \quad x > h; \quad z = 0,1; \\
-% 		p = p_f \quad \text{при} \quad y = 0, \quad x \leq h.
-% 	\end{gathered}
-% 	\label{eq:kham_inner_section_main_boundaries}
-% \end{equation}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/schemes/kham_fract_inner_scheme.png}
+	\caption{Схема расчётной области притока к горизонтальной скважине с трансверсальной трещиной ГРП}
+	\label{fig:kham_fract_inner_scheme}
+\end{figure}
 
-% Плоская задача для давления~$p_f$ в трещине ГРП при $y=0, \delta \longrightarrow 0$ и с учетом того, что плоскость~$y=0$ является плоскостью симметрии, имеет вид
-% \begin{equation}
-% 	\displaystyle
-% 	\Delta p_f + \dfrac{1}{M} \left. \dfrac{\partial p}{\partial y} \right|_{y=\delta} = 0,
-% 	\label{eq:kham_simple_main_pf}
-% \end{equation}
+C учетом плоской симметрии граничные условия для давления~$p$ в пласте~(\ref{eq:kham_main_p_res}) запишем так:
+\begin{equation}
+	\displaystyle
+	\begin{gathered}
+		p = 0 \quad \text{при} \quad x \in \gamma; \quad p=1 \quad \text{при} \quad x = 1; \\
+		\dfrac{\partial p}{\partial n} = 0 \quad \text{при} \quad x=0; \quad
+		y = d; \quad y = 0, \quad x > h; \quad z = 0,1; \\
+		p = p_f \quad \text{при} \quad y = 0, \quad x \leq h.
+	\end{gathered}
+	\label{eq:kham_fract_inner_main_boundaries}
+\end{equation}
 
-% \begin{equation}
-% 	\displaystyle
-% 	\left. p_f \right|_{\gamma} = 0; \quad \dfrac{\partial p_f}{\partial n} = 0 \quad \text{при} \quad x=0, h.
-% 	\label{eq:kham_simple_main_pf_boundaries}
-% \end{equation}
+Граничные условия для плоской задачи~(\ref{eq:kham_main_p_fract}) для давления~$p_f$ в 
+плоскости трещины $y=0$ при $\delta \to 0$ с учетом симметрии:
+\begin{equation}
+	\displaystyle
+	p_f = 0 \quad \text{при} \quad x \in \gamma_f; \quad \dfrac{\partial p_f}{\partial n} = 0 \quad \text{при} \quad x=0, h.
+	\label{eq:kham_fract_inner_main_pf_boundaries}
+\end{equation}
 
-% Нетрудно видеть, что для трещин бесконечной проводимости $M \longrightarrow \infty$ и
-% (\ref{eq:kham_simple_main_pf}) превращается в уравнение $p_f = 0$, которое при граничных
-% условиях (\ref{eq:kham_simple_main_pf_boundaries}) имеет тривиальное решение $p_f \equiv 0$.
-% Напротив, для тонких плохопроводящих трещин $M \longrightarrow 0$, и уравнение (\ref{eq:kham_simple_main_pf}),
-% предварительно умноженное на $M$ вырождается в равенство~$\partial p/\partial y = 0$, которое
-% с учетом $p_f = p$ (\ref{eq:kham_simple_main_pf_boundaries}) приводит к рассмотренной в
-% работе~\cite{lit:kham_mazo_uzku_2015} задаче о ГС без трещин ГРП.
+Нетрудно видеть, что для трещин бесконечной проводимости $M \to \infty$ уравнение~(\ref{eq:kham_main_p_fract}) 
+превращается в $\Delta_{xz} p_f = 0$, которое при граничных
+условиях (\ref{eq:kham_fract_inner_main_pf_boundaries}) имеет тривиальное решение $p_f \equiv 0$.
+Напротив, для тонких плохопроводящих трещин $M \to 0$ уравнение (\ref{eq:kham_main_p_fract}),
+предварительно умноженное на $M$ вырождается в равенство~$\partial p/\partial y = 0$, которое
+с учетом $p_f = p$ (\ref{eq:kham_fract_inner_main_boundaries}) приводит к рассмотренной в
+предыдущей главе задаче о ГС без трещин ГРП.
 
-% При конечных $M$ приближенное решение задачи можно получить, приняв два упрощения:
-% \begin{enumerate}
-% 	\item деление области внутри трещины на две подобласти: (а) $r_w \leq x < H$, (б) $H \leq x \leq h$;
-% 	\item  аппроксимация второго члена уравнения (\ref{eq:kham_simple_main_pf}) при помощи выражения
-% 	      \begin{equation}
-% 		      \displaystyle
-% 		      \dfrac{\partial p}{\partial y} \approx \dfrac{1}{d}\left(p_d - p_f\right),
-% 		      \label{eq:kham_dpdy_approx}
-% 	      \end{equation}
-% 	      где~$p_d(x)$~--~давление в пласте в плоскости симметрии~$y=d$.
-% 	      Если берег трещины внутренний, то $p_d$ вычисляется по формулам
-% 	      распределения давления в  пласте, а если внешний, то возможны два варианта: трещина находится
-% 	      от торца скважины на расстояние больше $d$, тогда можно считать ее как внутреннюю;
-% 	      трещина находится непосредственно на торце скважины, тогда в формуле~(\ref{eq:kham_dpdy_approx})
-% 	      следует положить $d = 1$, $p_d = 1$ (давление на контуре питания).
-% \end{enumerate}
+\mysub{Подобласть (I) $r_w \leq x < H$}
+В трещине также воспользуемся допущением о том, что давление $p^f_{\Gamma}$ на
+границе $x=H$ близко к давлению на окружности $\Gamma_f=\left\{\left(x,z\right): \sqrt{x^2 + z^2} = H \right\}$. %chktex 21
+Тогда в подобласти, ограниченной окружностями $\gamma_f$ и $\Gamma_f$ и лучами $x=0$ и $z=0$
+с учетом симметрии решение берётся радиально-симметричным и с учетом (\ref{eq:kham_hw_inner_rad_qp}) и (\ref{eq:kham_dpdy_approx})
+\begin{equation}
+	\displaystyle
+	\begin{gathered}
+		\dfrac{1}{r}\dfrac{d}{dr}\left(r\dfrac{d p_f}{dr}\right) - \dfrac{p_f}{Md} =
+		- p^R_{\Gamma}\dfrac{1}{Md} \dfrac{\ln{\left(r/r_w\right)}}{\ln{\left(H/r_w\right)}}, \quad r_w < r < H;    \\[8pt]
+		p_f = 0 \quad \text{при} \quad r = r_w; \quad p_f = p^f_{\Gamma} \quad \text{при} \quad r = H,
+	\end{gathered}
+	\label{eq:kham_fract_inner_area_I_press_equation}
+\end{equation}
+где $p^f_{\Gamma}$ — давление в трещине на границе $\Gamma_f$, $p^R_{\Gamma}$ — давление в
+пласте на границе $\Gamma$ в плоскости симметрии $y=d$.
 
-% \subsubsection{Внутренний берег трещины}
+Уравнение~(\ref{eq:kham_fract_inner_area_I_press_equation}) линейное неоднородное дифференциальное уравнение второго порядка.
+Общее решение такого уравнения имеет вид
+\begin{equation}
+	\displaystyle
+	p_f(r) = p_f^h\left(r\right) + p_f^p\left(r\right),
+	\label{eq:kham_common_final_pf_ode_solution_view}
+\end{equation}
+где $p_f^h\left(r\right)$~--~решение однородного уравнения, а $p_f^p\left(r\right)$~--~неоднородного.
+Однородную часть уравнения~(\ref{eq:kham_fract_inner_area_I_press_equation}) можно записать в виде
+\begin{equation}
+	\displaystyle
+	\dfrac{1}{r}\dfrac{d}{dr}\left(r\dfrac{d p_f^h}{dr}\right) - \lambda^2 p_f^h = 0, \quad \lambda^2 = \dfrac{1}{Md} > 0
+	\label{eq:kham_fract_inner_pf_area_I_mono}
+\end{equation}
+Решение такого уравнения~(\ref{eq:kham_fract_inner_pf_area_I_mono}) имеет вид
+\begin{equation}
+	\displaystyle
+	p_f^h\left(r\right) = A_I I_0\left(\lambda r\right) + B_I K_0\left(\lambda r\right),
+	\label{eq:kham_common_fa2_press_uniform_solution_main}
+\end{equation}
+где $I_0$, $K_0$~---~модифицированные функции Бесселя первого и второго рода нулевого порядка соответственно,
+$A_I$, $B_I$~---~константы, определяемые из граничных условий~(\ref{eq:kham_fract_inner_area_I_press_equation}),
+после того как найдено решение неоднородной части уравнения.
 
-% \mysub{Подобласть (а) $r_w \leq x < H$}
-% В трещине также воспользуемся допущением о том, что давление $p^f_{\Gamma}$ на
-% границе $x=H$ близко к давлению на окружности $\Gamma_f=\left\{\left(x,z\right): \sqrt{x^2 + z^2} = H \right\}$. %chktex 21
-% Тогда в подобласти, ограниченной окружностями $\gamma_f$ и $\Gamma_f$ и лучами $x=0$ и $z=0$
-% фильтрация будет плоско-радиальной и описываться одномерной задачей с учетом (\ref{eq:kham_dpdy_approx})
-% и (\ref{eq:kham_reservoir_press_inner_section_radial})
-% \begin{equation}
-% 	\displaystyle
-% 	\begin{gathered}
-% 		\dfrac{1}{r}\dfrac{d}{dr}\left(r\dfrac{d p_f}{dr}\right) - \dfrac{p_f}{Md} =
-% 		- p^R_{\Gamma}\dfrac{1}{Md} \dfrac{\ln{\left(r/r_w\right)}}{\ln{\left(H/r_w\right)}}, \quad r_w < r < H;    \\[8pt]
-% 		p_f = 0 \quad \text{при} \quad r = r_w; \quad p_f = p^f_{\Gamma} \quad \text{при} \quad r = H,
-% 	\end{gathered}
-% 	\label{eq:kham_fract_area_a_press_main}
-% \end{equation}
-% где $p^f_{\Gamma}$ — давление в трещине на границе $\Gamma_f$, $p^R_{\Gamma}$ — давление в
-% пласте на границе $\Gamma$ в плоскости симметрии $y=d$.
+Рассмотрим неоднородное уравнение
+\begin{equation}
+	\displaystyle
+	\dfrac{1}{r}\dfrac{d}{dr}\left(r\dfrac{d p_f^p}{dr}\right) - \dfrac{p_f^p}{Md} = f\left(r\right), \quad
+	f\left(r\right) = - \dfrac{p^R_{\Gamma}}{Md} \dfrac{\ln{\left(r/r_w\right)}}{\ln{\left(H/r_w\right)}}.
+	\label{eq:kham_fract_inner_part_I_press_nonuniform_equation}
+\end{equation}
+Решение этого уравнения будем искать в виде
+\begin{equation}
+	\displaystyle
+	p_f^p\left(r\right) = C_I \ln\left(r/r_w\right).
+	\label{eq:kham_fract_inner_part_I_press_nonunif_sol_form}
+\end{equation}
+Вид такого решения выбран исходя из вида правой части $f\left(r\right)$ уравнения~(\ref{eq:kham_fract_inner_part_I_press_nonuniform_equation}).
+Константу $C_I$ определим, подставив (\ref{eq:kham_fract_inner_part_I_press_nonunif_sol_form}) в~(\ref{eq:kham_fract_inner_part_I_press_nonuniform_equation})
+и приравняв коэффициенты при $\ln\left(r/r_w\right)$ в левой и правой частях уравнения. Отсюда получим, что
+\begin{equation}
+	\displaystyle
+	C_I = \dfrac{p^R_{\Gamma}}{\ln{\left(H/r_w\right)}}.
+	\label{eq:kham_fract_inner_part_I_sol_nonunif_c_cf}
+\end{equation}
 
-% Уравнение~(\ref{eq:kham_fract_area_a_press_main}) линейное неоднородное дифференциальное уравнение второго порядка.
-% Общее решение такого уравнения имеет вид
-% \begin{equation}
-% 	\displaystyle
-% 	p_f(r) = p_f^h\left(r\right) + p_f^p\left(r\right),
-% 	\label{eq:kham_kham_final_pf_ode_solution_view}
-% \end{equation}
-% где $p_f^h\left(x\right)$~--~решение однородного уравнения, а $p_f^p\left(x\right)$~--~неоднородного.
-% Однородную часть уравнения~(\ref{eq:kham_fract_area_a_press_main}) можно записать в виде
-% \begin{equation}
-% 	\displaystyle
-% 	\dfrac{1}{r}\dfrac{d}{dr}\left(r\dfrac{d p_f^h}{dr}\right) - \lambda^2 p_f^h = 0, \quad \lambda^2 = \dfrac{1}{Md} > 0
-% 	\label{eq:kham_fract_inner_pf_part2_mono}
-% \end{equation}
-% Решение такого уравнения~(\ref{eq:kham_fract_inner_pf_part2_mono}) имеет вид
-% \begin{equation}
-% 	\displaystyle
-% 	p_f^h\left(r\right) = A_a I_0\left(\lambda r\right) + B_a K_0\left(\lambda r\right),
-% 	\label{eq:kham_fa2_press_uniform_solution_main}
-% \end{equation}
-% где $I_0, K_0$~--~модифицированные функции Бесселя первого и второго рода нулевого порядка соответственно,
-% $A_a,B_a$~--~константы, определяемые из граничных условий~(\ref{eq:kham_fract_area_a_press_main}),
-% после того как найдено решение неоднородной части уравнения.
+Теперь, когда решение неоднородного уравнения найдено, коэффициенты $A_a, B_a$ определяются из решения системы
+линейных уравнений, полученных из граничных условий~(\ref{eq:kham_fract_inner_area_I_press_equation}), путем подставления
+в них (\ref{eq:kham_common_final_pf_ode_solution_view})
+\begin{equation}
+	\displaystyle
+	\begin{gathered}
+		A_I = - \dfrac{K_0 \left(\lambda r_w\right)}{D_I} \left(p^f_{\Gamma} - p^R_{\Gamma}\right), \quad
+		B_I = \dfrac{I_0 \left(\lambda r_w\right)}{D_I} \left(p^f_{\Gamma} - p^R_{\Gamma}\right), \\[6pt]
+		D_I = I_0 \left(\lambda r_w \right)K_0\left(\lambda H\right) - I_0\left(\lambda H\right) K_0\left(\lambda r_w\right)
+	\end{gathered}
+	\label{eq:kham_fract_inner_part_I_ab_sol}
+\end{equation}
 
-% Рассмотрим неоднородное уравнение
-% \begin{equation}
-% 	\displaystyle
-% 	\dfrac{1}{r}\dfrac{d}{dr}\left(r\dfrac{d p_f^p}{dr}\right) - \dfrac{p_f^p}{Md} = f\left(r\right), \quad
-% 	f\left(r\right) = - \dfrac{p^R_{\Gamma}}{Md} \dfrac{\ln{\left(r/r_w\right)}}{\ln{\left(H/r_w\right)}}.
-% 	\label{eq:kham_fa2_press_nonuniform_equation}
-% \end{equation}
-% Решение этого уравнения будем искать в виде
-% \begin{equation}
-% 	\displaystyle
-% 	p_f^p\left(r\right) = C_a \ln\left(r/r_w\right).
-% 	\label{eq:kham_fa2_nonunif_sol_form}
-% \end{equation}
-% Вид такого решения выбран исходя из вида правой части $f\left(r\right)$ уравнения~(\ref{eq:kham_fa2_press_nonuniform_equation}).
-% Константу $C_a$ определим, подставив (\ref{eq:kham_fa2_nonunif_sol_form}) в~(\ref{eq:kham_fa2_press_nonuniform_equation})
-% и приравняв коэффициенты при $\ln\left(r/r_w\right)$ в левой и правой частях уравнения. Отсюда получим, что
-% \begin{equation}
-% 	\displaystyle
-% 	C_a = \dfrac{p^R_{\Gamma}}{\ln{\left(H/r_w\right)}}.
-% 	\label{eq:kham_sol_nonunif_c_cf}
-% \end{equation}
+Тогда окончательно распределение давления в трещине в области (I) с учетом~(\ref{eq:kham_common_final_pf_ode_solution_view}),
+(\ref{eq:kham_common_fa2_press_uniform_solution_main}), (\ref{eq:kham_fract_inner_part_I_press_nonunif_sol_form}), 
+(\ref{eq:kham_fract_inner_part_I_sol_nonunif_c_cf}),
+(\ref{eq:kham_fract_inner_part_I_ab_sol}) будет определяться по формуле
+\begin{equation}
+	\displaystyle
+	\begin{gathered}
+		p_f\left(r\right) = \left(p^f_{\Gamma} - p^R_{\Gamma}\right)
+		\dfrac{E_I\left(r\right)}{D_I}
+		+ p^R_{\Gamma} \dfrac{\ln\left(r/r_w\right)}{\ln{\left(H/r_w\right)}}, \quad
+		r_w \leq r \leq H \\[6pt]
+		E_I\left(r\right) = I_0\left(\lambda r_w\right)K_0\left(\lambda r\right) - K_0\left(\lambda r_w\right)I_0\left(\lambda r\right),
+	\end{gathered}
+	\label{eq:kham_final_sol_pf_radial}
+\end{equation}
+а расход $Q_I$ на грани $\Gamma_f$
+\begin{equation}
+	\displaystyle
+	\begin{gathered}
+		Q_I = - \dfrac{\pi \theta \delta H}{2} \left. \dfrac{d p_f}{d r}\right|_{r=H} =
+		\theta \left(    F_I \left(p^f_{\Gamma} - p^R_{\Gamma}\right) + G_I \right) , \\[8pt]
+		F_I = \dfrac{\pi \delta H \lambda H_I\left(H\right)}{2 D_I}, \quad
+		G_I = -\dfrac{\pi \delta p^R_{\Gamma}}{2 \ln{\left(H/r_w\right)}},  \\[8pt]
+		\dfrac{d p_f}{d r} = \left(p^f_{\Gamma} - p^R_{\Gamma}\right)
+		\dfrac{-\lambda H_I\left(r\right)}{D_I} +
+		\dfrac{p^R_{\Gamma}}{r \ln{\left(H/r_w\right)}}, \\[8pt]
+		H_I\left(r\right) =
+		I_0\left(\lambda r_w\right)K_1\left(\lambda r\right) +
+		K_0\left(\lambda r_w\right)I_1\left(\lambda r\right),
+	\end{gathered}
+	\label{eq:kham_q_Gf}
+\end{equation}
+где $I_1, K_1$~--~модифицированные функции Бесселя первого порядка.
 
-% Теперь, когда решение неоднородного уравнения найдено, коэффициенты $A_a, B_a$ определяются из решения системы
-% линейных уравнений, полученных из граничных условий~(\ref{eq:kham_fract_area_a_press_main}), путем подставления
-% в них (\ref{eq:kham_kham_final_pf_ode_solution_view})
-% \begin{equation}
-% 	\displaystyle
-% 	\begin{gathered}
-% 		A_a = - \dfrac{K_0 \left(\lambda r_w\right)}{D_a} \left(p^f_{\Gamma} - p^R_{\Gamma}\right), \quad
-% 		B_a = \dfrac{I_0 \left(\lambda r_w\right)}{D_a} \left(p^f_{\Gamma} - p^R_{\Gamma}\right), \\[6pt]
-% 		D_a = I_0 \left(\lambda r_w \right)K_0\left(\lambda H\right) - I_0\left(\lambda H\right) K_0\left(\lambda r_w\right)
-% 	\end{gathered}
-% 	\label{eq:kham_fa2_press_ab_sol}
-% \end{equation}
+\mysub{Подобласть (II) $H \leq x \leq h$}
+В подобласти (II) получим плоско-параллельную задачу и уравнение для давления $p_f$ с 
+учетом~(\ref{eq:kham_hw_inner_par_qp}) будет иметь вид
+\begin{equation}
+	\displaystyle
+	\begin{gathered}
+		\dfrac{d^2 p_f}{dx^2}-\dfrac{p_f}{Md}=-\dfrac{1}{Md}\left(p^R_{\Gamma} + (1 - p^R_{\Gamma})\dfrac{x - H}{1-H}\right), 
+		\quad H \leq x \leq h, \\
+		p_f = p^f_{\Gamma}  \quad \text{при} \quad x = H; \quad \dfrac{d p_f}{d x} = 0 \quad \text{при} \quad x = h.
+	\end{gathered}
+	\label{eq:kham_hw_inner_part_II_pf_1d_equation}
+\end{equation}
 
-% Тогда окончательно распределение давления в трещине в области (а) с учетом~(\ref{eq:kham_kham_final_pf_ode_solution_view}),
-% (\ref{eq:kham_fa2_press_uniform_solution_main}), (\ref{eq:kham_fa2_nonunif_sol_form}), (\ref{eq:kham_sol_nonunif_c_cf}),
-% (\ref{eq:kham_fa2_press_ab_sol}) будет определяться по формуле
-% \begin{equation}
-% 	\displaystyle
-% 	\begin{gathered}
-% 		p_f\left(r\right) = \left(p^f_{\Gamma} - p^R_{\Gamma}\right)
-% 		\dfrac{E_a\left(r\right)}{D_a}
-% 		+ p^R_{\Gamma} \dfrac{\ln\left(r/r_w\right)}{\ln{\left(H/r_w\right)}}, \quad
-% 		r_w \leq r \leq H \\[6pt]
-% 		E_a\left(r\right) = I_0\left(\lambda r_w\right)K_0\left(\lambda r\right) - K_0\left(\lambda r_w\right)I_0\left(\lambda r\right),
-% 	\end{gathered}
-% 	\label{eq:kham_final_sol_pf_radial}
-% \end{equation}
-% а расход $Q_a$ на грани $\Gamma_f$
-% \begin{equation}
-% 	\displaystyle
-% 	\begin{gathered}
-% 		Q_a = - \dfrac{\pi \theta \delta H}{2} \left. \dfrac{d p_f}{d r}\right|_{r=H} =
-% 		\theta \left(    F_a \left(p^f_{\Gamma} - p^R_{\Gamma}\right) + G_a \right) , \\[8pt]
-% 		F_a = \dfrac{\pi \delta H \lambda H_a\left(H\right)}{2D_a}, \quad
-% 		G_a = -\dfrac{\pi \delta p^R_{\Gamma}}{2 \ln{\left(H/r_w\right)}},  \\[8pt]
-% 		\dfrac{d p_f}{d r} = \left(p^f_{\Gamma} - p^R_{\Gamma}\right)
-% 		\dfrac{-\lambda H_a\left(r\right)}{D_a} +
-% 		\dfrac{p^R_{\Gamma}}{r \ln{\left(H/r_w\right)}}, \\[8pt]
-% 		H_a\left(r\right) =
-% 		I_0\left(\lambda r_w\right)K_1\left(\lambda r\right) +
-% 		K_0\left(\lambda r_w\right)I_1\left(\lambda r\right),
-% 	\end{gathered}
-% 	\label{eq:kham_q_Gf}
-% \end{equation}
-% где $I_1, K_1$~--~модифицированные функции Бесселя первого порядка.
+Уравнение~(\ref{eq:kham_hw_inner_part_II_pf_1d_equation}) линейное неоднородное дифференциальное уравнение второго порядка.
+Общее решение такого уравнения имеет вид~(\ref{eq:kham_common_final_pf_ode_solution_view}).
 
-% \mysub{Подобласть (б) $H \leq x \leq h$}
-% В подобласти (б) получим плоско-параллельную задачу и уравнение для давления $p_f$ будет иметь вид
-% \begin{equation}
-% 	\displaystyle
-% 	\begin{gathered}
-% 		\dfrac{d^2 p_f}{dx^2}-\dfrac{p_f}{Md}=-\dfrac{1}{Md}\left(p^R_{\Gamma} + (1 - p^R_{\Gamma})\dfrac{x - H}{1-H}\right), \quad H \leq x \leq h, \\
-% 		p_f = p^f_{\Gamma}  \quad \text{при} \quad x = H; \quad \dfrac{\partial p_f}{\partial x} = 0 \quad \text{при} \quad x = h.
-% 	\end{gathered}
-% 	\label{eq:kham_approx_pf_part2}
-% \end{equation}
+Однородная часть уравнения~(\ref{eq:kham_hw_inner_part_II_pf_1d_equation})
+\begin{equation}
+	\displaystyle
+	\dfrac{d^2 p_f^h}{dx^2}-\lambda^2 p_f^h = 0, \quad \text{где} \quad \lambda^2 = \dfrac{1}{Md} > 0
+	\label{eq:kham_fract_inner_pf_part_II_mono}
+\end{equation}
+Общее решение уравнения~(\ref{eq:kham_fract_inner_pf_part_II_mono})
+\begin{equation}
+	\displaystyle
+	p_f^h = A_{II} e^{\lambda x} + B_{II} e^{-\lambda x},
+	\label{eq:kham_fract_inner_pf_part_II_mono_solution}
+\end{equation}
+где $A_{II}, B_{II}$~--~константы, определяемые из граничных условий~(\ref{eq:kham_hw_inner_part_II_pf_1d_equation}).
 
-% Уравнение~(\ref{eq:kham_approx_pf_part2}) линейное неоднородное дифференциальное уравнение второго порядка.
-% Общее решение такого уравнения имеет вид~(\ref{eq:kham_kham_final_pf_ode_solution_view}).
-
-% Однородная часть уравнения~(\ref{eq:kham_approx_pf_part2})
-% \begin{equation}
-% 	\displaystyle
-% 	\dfrac{d^2 p_f^h}{dx^2}-\lambda^2 p_f^h = 0, \quad \text{где} \quad \lambda^2 = \dfrac{1}{Md} > 0
-% 	\label{eq:kham_final_pf_part2_mono}
-% \end{equation}
-% Общее решение уравнения~(\ref{eq:kham_final_pf_part2_mono})
-% \begin{equation}
-% 	\displaystyle
-% 	p_f^h = A_b e^{\lambda x} + B_b e^{-\lambda x},
-% 	\label{eq:kham_final_pf_part2_mono_solution}
-% \end{equation}
-% где $A_b, B_b$~--~константы, которые определим из граничных условий~(\ref{eq:kham_approx_pf_part2}).
-
-% В неоднородной части уравнения правая часть является линейной функцией вида
-% \begin{equation}
-% 	\displaystyle
-% 	f\left(x\right)=\dfrac{1}{Md} \left(p^R_{\Gamma} + \dfrac{\left( 1-p^R_{\Gamma}\right)\left(x-H\right)}{\left(1-H\right)}\right).
-% 	\label{eq:kham_fx}
-% \end{equation}
-% Частное решение неоднородного уравнения с правой частью вида~(\ref{eq:kham_fx}) ищется в виде линейной функции
-% \begin{equation}
-% 	\displaystyle
-% 	p_f^p = C_b x + D_b.
-% 	\label{eq:kham_partical_pf_part2}
-% \end{equation}
-% Коэффициенты $C_b, D_b$ получим, подставив~(\ref{eq:kham_partical_pf_part2}) в (\ref{eq:kham_approx_pf_part2})
-% и приравняв соответствующие коэффициенты при $x$ и при свободном слагаемом
-% \begin{equation}
-% 	\displaystyle
-% 	C_b = \dfrac{1-p^R_{\Gamma}}{1-H}, \quad
-% 	D_b = p^R_{\Gamma} - C_b H.
-% 	\label{eq:kham_cf_c_d}
-% \end{equation}
-% Коэффициенты $C_b, D_b$ определены в~(\ref{eq:kham_cf_c_d}), осталось определить коэффициенты $A_b, B_b$.
+В неоднородной части уравнения правая часть является линейной функцией вида
+\begin{equation}
+	\displaystyle
+	f\left(x\right)=\dfrac{1}{Md} \left(p^R_{\Gamma} + \dfrac{\left( 1-p^R_{\Gamma}\right)\left(x-H\right)}{\left(1-H\right)}\right).
+	\label{eq:kham_fract_inner_part_II_fx}
+\end{equation}
+Частное решение неоднородного уравнения с правой частью вида~(\ref{eq:kham_fract_inner_part_II_fx}) ищется в виде линейной функции
+\begin{equation}
+	\displaystyle
+	p_f^p = C_{II} x + D_{II}.
+	\label{eq:kham_fract_inner_part_II_partical_pf_view}
+\end{equation}
+Коэффициенты $C_{II}, D_{II}$ получим, подставив~(\ref{eq:kham_fract_inner_part_II_partical_pf_view}) в (\ref{eq:kham_hw_inner_part_II_pf_1d_equation})
+и приравняв соответствующие коэффициенты при $x$ и при свободном слагаемом
+\begin{equation}
+	\displaystyle
+	C_{II} = \dfrac{1-p^R_{\Gamma}}{1-H}, \quad
+	D_{II} = p^R_{\Gamma} - C_{II} H.
+	\label{eq:kham_fract_inner_part_II_cf_c_d}
+\end{equation}
+Коэффициенты $C_{II}, D_{II}$ определены в~(\ref{eq:kham_fract_inner_part_II_cf_c_d}), осталось определить коэффициенты $A_{II}, B_{II}$.
 % Для этого, используя граничные условия из~(\ref{eq:kham_approx_pf_part2}), составим систему алгебраических уравнений
 % \begin{equation}
 % 	\displaystyle
