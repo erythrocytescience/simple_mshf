@@ -263,33 +263,33 @@ $\Gamma$
 
 \begin{figure}[H]
 	\centering
-	\includesvg[width=0.5\linewidth]{images/hw/hw_inner/kham_hw_inner_theta.svg}
+	\includesvg[width=0.5\linewidth]{images/hw/hw_inner/kham_hw_inner_theta_mrst.svg}
 	\caption{Поправочный коэффициент $\theta$}
-	\label{fig:kham_hw_inner_theta_map}
+	\label{fig:kham_hw_inner_theta_map_mrst}
 \end{figure}
 
-Из рис.~\ref{fig:kham_hw_inner_theta_map} видно, что величина поправочного коэффициента
+Из рис.~\ref{fig:kham_hw_inner_theta_map_mrst} видно, что величина поправочного коэффициента
 $\theta$ не зависит от $r_w$ и для любых $H$ близка к единице.
 Действительно, при $\theta=1$ невязка~(\ref{eq:kham_common_residual}) по давлению
-$p_{\Gamma}$ варьируется от 2 до 9~\% (рис.~\ref{fig:kham_hw_inner_epg_map}), а по
-дебиту $q$ не более 4~\% (рис.~\ref{fig:kham_hw_inner_eq_map})
+$p_{\Gamma}$ варьируется от 2 до 9~\% (рис.~\ref{fig:kham_hw_inner_epg_map_mrst}), а по
+дебиту $q$ не более 4~\% (рис.~\ref{fig:kham_hw_inner_eq_map_mrst})
 
-Поэтому в дальнейших расчетах будет считать, что в формуле~(\ref{eq:kham_hw_inner_pg}) $\theta=1$.
+Поэтому в дальнейших расчетах будем считать, что в формуле~(\ref{eq:kham_hw_inner_pg}) $\theta=1$.
 
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}{0.48\textwidth}
 		\centering
-		\includesvg[width=\linewidth]{images/hw/hw_inner/kham_hw_inner_Eq.svg}
+		\includesvg[width=\linewidth]{images/hw/hw_inner/kham_hw_inner_Eq_mrst.svg}
 		\caption{}
-		\label{fig:kham_hw_inner_eq_map}
+		\label{fig:kham_hw_inner_eq_map_mrst}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}{0.48\textwidth}
 		\centering
-		\includesvg[width=\linewidth]{images/hw/hw_inner/kham_hw_inner_Epg.svg}
+		\includesvg[width=\linewidth]{images/hw/hw_inner/kham_hw_inner_Epg_mrst.svg}
 		\caption{}
-		\label{fig:kham_hw_inner_epg_map}
+		\label{fig:kham_hw_inner_epg_map_mrst}
 	\end{subfigure}
 	\caption{
 		Зависимости невязки от $H$, $r_w$ (при $\theta=1$):
@@ -326,7 +326,7 @@ $p_{\Gamma}$ варьируется от 2 до 9~\% (рис.~\ref{fig:kham_hw_i
 \end{figure}
 
 Аналитическое и численное давление на границе $\Gamma$ тем лучше согласуются, чем меньше
-значения $r_w$ и больше высота пласта $H$ (рис.~\ref{fig:kham_hw_inner_epg_map}).
+значения $r_w$ и больше высота пласта $H$ (рис.~\ref{fig:kham_hw_inner_epg_map_mrst}).
 Максимальное отклонение наблюдается при $H = 0.05$, $r = 0.002$,
 минимальное~--~при $H = 0.25$, $r = 0.0005$. Распределения давления при
 этих значениях приведены на рис.~\ref{fig:kham_hw_inner_press_disrt}.
@@ -464,7 +464,7 @@ $p_{\Gamma}$ варьируется от 2 до 9~\% (рис.~\ref{fig:kham_hw_i
 несогласованность аналитического и численного решений. При этом $E_{p_\Gamma}$~(рис.~\ref{fig:kham_hw_outer_epg_map_mrst})
 не превышает 10~\% и практически не зависит от $r_w$. Следует подчеркнуть, что причиной этих
 расхождений является не упрощённость аналитической модели, а ограничение MRST, который не учитывает
-сферическую симметрию и рассматривает течение только в декартовой постановке.
+сферическую симметрию.
 
 
 \begin{figure}[H]
@@ -1091,7 +1091,7 @@ $\text{RMSE} \sim 2$, $\text{Mean} \sim 1$, что свидетельствуе�
 Как видно из рис.~\ref{fig:kham_rad_hypo_fault_q_l_mrst}, удельный приток~$q$
 оказывается ниже, чем по аналитической модели, даже в средней части ствола, вдали от торцов.
 Это может означать, что: 1) торцевой приток влияет на распределение радиального притока
-даже на удалении от торцов (в частности, это соответствует разнице в 3--4~\% на рис.~\ref{fig:kham_hw_inner_eq_map});
+даже на удалении от торцов (в частности, это соответствует разнице в 3--4~\% на рис.~\ref{fig:kham_hw_inner_eq_map_mrst});
 2) численные решения в MRST и в модели~\cite{lit:kham_mazo_uzku_2015} хорошо согласуются
 (рис.~\ref{fig:kham_rad_hypo_fault_q_l_mgrp},~\ref{fig:kham_rad_hypo_fault_q_l_mrst},~\ref{fig:kham_well_along_ql_H015_L5_rw0001_mgrp_mrst}).
 В работе~\cite{lit:kham_ozkan1999} получен качественно аналогичный профиль притока вдоль ствола скважины (рис.~\ref{fig:kham_well_along_ql_H015_L5_rw0001_mgrp_mrst}).
@@ -1111,32 +1111,32 @@ $\text{RMSE} \sim 2$, $\text{Mean} \sim 1$, что свидетельствуе�
 	\centering
 	% --- Первый ряд ---
 	\begin{subfigure}{0.48\textwidth}
-		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_G1_map_L05_mrst.svg}
+		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_EQ_L0.5_mrst.svg}
 		\caption{}
 		\label{fig:kham_hw_pipe_edge_effect_L0.5_mrst}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}{0.48\textwidth}
-		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_G1_map_L1_mrst.svg}
+		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_EQ_L1_mrst.svg}
 		\caption{}
 		\label{fig:kham_hw_pipe_edge_effect_L1_mrst}
 	\end{subfigure}
 
 	% --- Второй ряд ---
 	\begin{subfigure}{0.48\textwidth}
-		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_G1_map_L5_mrst.svg}
+		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_EQ_L5_mrst.svg}
 		\caption{}
 		\label{fig:kham_hw_pipe_edge_effect_L5_mrst}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}{0.48\textwidth}
-		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_G1_map_L10_mrst.svg}
+		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_EQ_L10_mrst.svg}
 		\caption{}
 		\label{fig:kham_hw_pipe_edge_effect_L10_mrst}
 	\end{subfigure}
 
 	\caption{
-		Зависимость~$Q_{\text{num}} / Q_{\text{an}}$ от $H$, $r_w$: а)~$L=0.5$, б)~$L=1$, в)~$L=5$, г)~$L=10$.
+		Зависимость~$E_Q$ от $H$, $r_w$: а)~$L=0.5$, б)~$L=1$, в)~$L=5$, г)~$L=10$.
 	}
 	\label{fig:kham_hw_pipe_edge_effects_mrst}
 \end{figure}
@@ -1246,32 +1246,32 @@ $Q_{\text{num}}/Q_{\text{an}}^{\text{skin}}$ остаётся близким к 
 	\centering
 	% --- Первый ряд ---
 	\begin{subfigure}{0.48\textwidth}
-		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_G2_map_L05_mrst.svg}
+		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_EQskin_L0.5_mrst.svg}
 		\caption{}
 		\label{fig:kham_hw_pipe_edge_effect_L0.5_r_approx}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}{0.48\textwidth}
-		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_G2_map_L1_mrst.svg}
+		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_EQskin_L1_mrst.svg}
 		\caption{}
 		\label{fig:kham_hw_pipe_edge_effect_L1_r_approx}
 	\end{subfigure}
 
 	% --- Второй ряд ---
 	\begin{subfigure}{0.48\textwidth}
-		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_G2_map_L5_mrst.svg}
+		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_EQskin_L5_mrst.svg}
 		\caption{}
 		\label{fig:kham_hw_pipe_edge_effect_L5_r_approx}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}{0.48\textwidth}
-		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_G2_map_L10_mrst.svg}
+		\includesvg[width=\linewidth]{images/hw/rad_hypo_fault/kham_EQskin_L10_mrst.svg}
 		\caption{}
 		\label{fig:kham_hw_pipe_edge_effect_L10_r_approx}
 	\end{subfigure}
 
 	\caption{
-		Зависимость~$Q_{\text{num}} / Q_{\text{an}}^{\text{skin}}$ от $H$, $r_w$: а)~$L=0.5$, б)~$L=1$, в)~$L=5$, г)~$L=10$.
+		Зависимость~$E_{Q_{\text{skin}}}$ от $H$, $r_w$: а)~$L=0.5$, б)~$L=1$, в)~$L=5$, г)~$L=10$.
 	}
 	\label{fig:kham_hw_pipe_edge_effects_r_approx}
 \end{figure}
@@ -1298,16 +1298,36 @@ $Q_{\text{num}}/Q_{\text{an}}^{\text{skin}}$ остаётся близким к 
 	ДОБАВИТЬ!!! еще ссылки
 \end{tcolorbox}
 
-На рис.~\ref{fig:kham_compare_hw_mrst} показано сравнение дебита $Q(L)$ при фиксированных $H$ и $r_w$:
+На рис.~\ref{fig:kham_compare_hw_models} показано сравнение дебита $Q(L)$ при фиксированных $H$ и $r_w$:
 кривая «Mazo» — авторская формула; «Joshi» — классическая инженерная формула Джоши~\cite{lit:kham_joshi1988};
 «Renard» — формула Ренара–Дюпуи~\cite{lit:kham_renard_dupuy1991}; «Numeric» — численное решение.
+
 \begin{figure}[H]
 	\centering
-	\includesvg[width=0.5\linewidth]{images/hw/kham_compare_hw.svg}
-	\caption{$Q(L)$ при фиксированных $H$ и $r_w$: «Mazo» — авторская формула; «Joshi»~---~\cite{lit:kham_joshi1988};
-		«Renard»~---~формула Ренара–Дюпуи~\cite{lit:kham_renard_dupuy1991}; «Numeric»~---~численное решение (MRST)}
-	\label{fig:kham_compare_hw_mrst}
+	\begin{subfigure}{0.48\textwidth}
+		\centering
+		\includesvg[width=\linewidth]{images/hw/kham_hw_models_compare_L_bound_area.svg}
+		\caption{}
+		\label{fig:kham_compare_hw_models_L_growth_area}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.48\textwidth}
+		\centering
+		\includesvg[width=\linewidth]{images/hw/kham_hw_models_compare_fix_bound_area.svg}
+		\caption{}
+		\label{fig:kham_compare_hw_models_fix_drain_area}
+	\end{subfigure}
+	\caption{
+		$Q(L)$ при $2H=0.1$ и $r_w=0.001$: «Mazo» — авторская формула; «Joshi»~---~\cite{lit:kham_joshi1988};
+		«Renard»~---~формула Ренара–Дюпуи~\cite{lit:kham_renard_dupuy1991}; «Numeric»~---~численное решение (MRST) \\
+		a)~``плавающий'' контур, б)~фиксированный контур
+	}
+	\label{fig:kham_compare_hw_models}
 \end{figure}
+
+На рис.~\ref{fig:kham_compare_hw_models_L_growth_area} изображен случай, когда расстояние от скважины до контура питания фиксированное,
+размер области изменяется вместе с изменением длины скважины.
+На рис.~\ref{fig:kham_compare_hw_models_fix_drain_area} область пласта фиксирована: ее ширина 2, длина 15.
 
 \begin{tcolorbox}[colback=red!20, colframe=black, coltitle=black, colbacktitle=red, title=\textbf{Ошибка}]
 	Скорее всего я тут некорректно сравниваю. В моей модели область дренирования автоматически увеличивается вместе с увеличением
@@ -1329,15 +1349,13 @@ $Q_{\text{num}}/Q_{\text{an}}^{\text{skin}}$ остаётся близким к 
 	\item  аппроксимация второго члена конечной разностью
 	      \begin{equation}
 		      \displaystyle
-		      \dfrac{\partial p}{\partial y} \approx \dfrac{1}{d}\left(p_d - p_f\right),
+		      \dfrac{\partial p}{\partial y} \approx \dfrac{ p_d - p_f}{\beta},
 		      \label{eq:kham_dpdy_approx}
 	      \end{equation}
-	      где~$p_d(x)$~--~давление в пласте на расстоянии~$d$ от трещины.
-	      Если берег трещины \emph{внутренний}, то $p_d$ вычисляется по формулам
-	      распределения давления в  пласте~(\ref{eq:kham_hw_inner_total_pressure}). Если берег \emph{внешний} и трещина
-	      расположена на расстоянии, превышающем $d$ от торца скважины, ее рассматривают как внутреннюю;
-	      если же трещина находится непосредственно у торца, то в~(\ref{eq:kham_dpdy_approx})
-	      полагают $d = 1$, $p_d = 1$ (давление на контуре питания).
+	      где~$p_d(x)$~--~давление в пласте на расстоянии~$d$ от трещины, $\beta$~---~некоторый коэффициент, а выборе
+	      которого поговорим позже.
+	      Если берег трещины \emph{внутренний}, то $p_d$ вычисляется по формуле~(\ref{eq:kham_hw_inner_total_pressure}).
+	      Если берег \emph{внешний}, то $p_d = 1$ (давление на контуре питания).
 \end{enumerate}
 
 \subsubsection{Внутренний берег трещины}
@@ -1394,8 +1412,8 @@ C учетом плоской симметрии граничные услови
 \begin{equation}
 	\displaystyle
 	\begin{gathered}
-		\dfrac{1}{r}\dfrac{d}{dr}\left(r\dfrac{d p_f}{dr}\right) - \dfrac{p_f}{Md} =
-		- p^R_{\Gamma}\dfrac{1}{Md} \dfrac{\ln{\left(r/r_w\right)}}{\ln{\left(H/r_w\right)}}, \quad r_w < r < H;    \\[8pt]
+		\dfrac{1}{r}\dfrac{d}{dr}\left(r\dfrac{d p_f}{dr}\right) - \dfrac{p_f}{M \beta} =
+		- p^R_{\Gamma}\dfrac{1}{M \beta} \dfrac{\ln{\left(r/r_w\right)}}{\ln{\left(H/r_w\right)}}, \quad r_w < r < H;    \\[8pt]
 		p_f = 0 \quad \text{при} \quad r = r_w; \quad p_f = p^f_{\Gamma} \quad \text{при} \quad r = H,
 	\end{gathered}
 	\label{eq:kham_fract_inner_area_I_press_equation}
@@ -1414,7 +1432,7 @@ C учетом плоской симметрии граничные услови
 Однородную часть уравнения~(\ref{eq:kham_fract_inner_area_I_press_equation}) можно записать в виде
 \begin{equation}
 	\displaystyle
-	\dfrac{1}{r}\dfrac{d}{dr}\left(r\dfrac{d p_f^h}{dr}\right) - \lambda^2 p_f^h = 0, \quad \lambda^2 = \dfrac{1}{Md} > 0
+	\dfrac{1}{r}\dfrac{d}{dr}\left(r\dfrac{d p_f^h}{dr}\right) - \lambda^2 p_f^h = 0, \quad \lambda^2 = \dfrac{1}{M \beta} > 0
 	\label{eq:kham_fract_inner_pf_area_I_mono}
 \end{equation}
 Решение такого уравнения~(\ref{eq:kham_fract_inner_pf_area_I_mono}) имеет вид
@@ -1430,7 +1448,7 @@ $A_I$, $B_I$~---~константы, определяемые из гранич�
 Рассмотрим неоднородное уравнение
 \begin{equation}
 	\displaystyle
-	\dfrac{1}{r}\dfrac{d}{dr}\left(r\dfrac{d p_f^p}{dr}\right) - \dfrac{p_f^p}{Md} = - \dfrac{p^R_{\Gamma}}{Md}  f\left(r\right), \quad
+	\dfrac{1}{r}\dfrac{d}{dr}\left(r\dfrac{d p_f^p}{dr}\right) - \dfrac{p_f^p}{M \beta} = - \dfrac{p^R_{\Gamma}}{M \beta}  f\left(r\right), \quad
 	f\left(r\right) = \dfrac{\ln{\left(r/r_w\right)}}{\ln{\left(H/r_w\right)}}.
 	\label{eq:kham_fract_inner_part_I_press_nonuniform_equation}
 \end{equation}
@@ -1502,7 +1520,7 @@ $A_I$, $B_I$~---~константы, определяемые из гранич�
 \begin{equation}
 	\displaystyle
 	\begin{gathered}
-		\dfrac{d^2 p_f}{dx^2}-\dfrac{p_f}{Md}=-\dfrac{1}{Md}\left(p^R_{\Gamma} + (1 - p^R_{\Gamma})\dfrac{x - H}{1-H}\right),
+		\dfrac{d^2 p_f}{dx^2}-\dfrac{p_f}{M \beta}=-\dfrac{1}{M \beta}\left(p^R_{\Gamma} + (1 - p^R_{\Gamma})\dfrac{x - H}{1-H}\right),
 		\quad H \leq x \leq h, \\
 		p_f = p^f_{\Gamma}  \quad \text{при} \quad x = H; \quad \dfrac{d p_f}{d x} = 0 \quad \text{при} \quad x = h.
 	\end{gathered}
@@ -1515,7 +1533,7 @@ $A_I$, $B_I$~---~константы, определяемые из гранич�
 Однородная часть уравнения~(\ref{eq:kham_hw_inner_part_II_pf_1d_equation})
 \begin{equation}
 	\displaystyle
-	\dfrac{d^2 p_f^h}{dx^2}-\lambda^2 p_f^h = 0, \quad \text{где} \quad \lambda^2 = \dfrac{1}{Md} > 0
+	\dfrac{d^2 p_f^h}{dx^2}-\lambda^2 p_f^h = 0, \quad \text{где} \quad \lambda^2 = \dfrac{1}{M \beta} > 0
 	\label{eq:kham_fract_inner_pf_part_II_mono}
 \end{equation}
 Общее решение уравнения~(\ref{eq:kham_fract_inner_pf_part_II_mono})
@@ -1624,8 +1642,8 @@ $A_I$, $B_I$~---~константы, определяемые из гранич�
 
 Во-вторых, как поток через боковую грань:
 \begin{equation}
-	Q_f \;=\; \dfrac{\pi}{2d} \int_{r_w}^H \left( p_d(r) - p_f^I(r)\right) r dr + 
-	\frac{H}{d} \int_H^h \bigl(p_d(x) - p_f^{II}(x)\bigr) dx
+	Q_f \;=\; \dfrac{\pi}{2 \beta} \int_{r_w}^H \left( p_d(r) - p_f^I(r)\right) r dr +
+	\frac{H}{ \beta} \int_H^h \bigl(p_d(x) - p_f^{II}(x)\bigr) dx
 	\label{eq:kham_fract_inner_Q2}
 \end{equation}
 где область интегрирования~$\Omega = \bigl([0,H]\times[0,h]\bigr)\setminus \gamma_f$ представляет собой прямоугольник $[0,H]\times[0,h]$,
@@ -1656,9 +1674,13 @@ $A_I$, $B_I$~---~константы, определяемые из гранич�
 \end{equation}
 где $p^R_{\Gamma}$ берется из~\eqref{eq:kham_hw_inner_pg}, а $p^f_{\Gamma}$~---~из~\eqref{eq:kham_fract_inner_pg}.
 
-\mysub{\textbf{Базовые проверки}}
+\mysub{Выбор коэффициента~$\beta$}
 
-Асимптоты по проводимости трещины~$M$.
+В простейшем случае можно положить $\beta = d$.
+Проведем проверку полученных решений в этом случае.
+
+\textit{I. Асимптоты по проводимости трещины~$M$.}
+
 При $M \to 0$ задача переходит в задачу для горизонтальной скважины без трещины (гидравлическая проводимость трещины пренебрежимо мала).
 При $M \to \infty$ задача соответствует идеально проводящей трещине, которая обеспечивает мгновенное выравнивание давления вдоль своей поверхности.
 Зафиксируем следующие параметры: $r_w = 0.001$, $\delta=0.0001$, $H=0.1$, $d=1$, $h=0.5$.
@@ -1679,8 +1701,8 @@ $A_I$, $B_I$~---~константы, определяемые из гранич�
 
 На рис.~\ref{fig:kham_fract_inner_pgf_assympt} приведена зависимость
 давления~$p_{\Gamma}^f$~\eqref{eq:kham_fract_inner_pg}
-в трещине на границе~$\Gamma_f$ от $M$. Пунктирной линией обозначено давление в пласте $p_{\Gamma}^R = 0.2457$. \\
-
+в трещине на границе~$\Gamma_f$ от $M$. Пунктирной линией обозначено давление в пласте $p_{\Gamma}^R = 0.2457$.
+Видим, что решение в трещине согласуется с решением в пласте. \\
 
 \textit{ 2. Давление в трещине.}
 
@@ -1696,7 +1718,10 @@ $A_I$, $B_I$~---~константы, определяемые из гранич�
 \end{figure}
 
 На рис.~\ref{fig:kham_fract_inner_pf_assympt} показано распределение давление в пласте при различных~$M$.
-Пунктриной линией обозначено распределение давление в пласте на расстоянии~$d$ от трещины. \\
+Пунктриной линией обозначено распределение давление в пласте на расстоянии~$d$ от трещины.
+Действительно, давление в трещине стремится к давлению в пласте при малых $M$ (разница только на торце трещины
+из-за граничного условия изоляции), и стремится к давлению на скважине при больших $M$.
+\\
 
 \textit{ 3. Дебит трещины.}
 
@@ -1720,8 +1745,8 @@ $A_I$, $B_I$~---~константы, определяемые из гранич�
 	\label{fig:kham_fract_inner_qf_assympt}
 \end{figure}
 
-На рис.~\ref{fig:kham_fract_inner_qf_assympt}: $Q_f^{\min}=1.67\cdot10^{-5}$, $Q_f^{\max}=0.0184$
-
+На рис.~\ref{fig:kham_fract_inner_qf_assympt}: $Q_f^{\min}=1.67\cdot10^{-5}$, $Q_f^{\max}=0.0184$.
+Асимптоты отлично описываются.
 
 % \subsubsection{Внешний берег трещины}
 % Внешний берег трещины может находится непосредственно на торце скважине или на некотором
